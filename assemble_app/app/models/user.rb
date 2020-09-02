@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :members
-  has_many :projects, through :members
+  has_many :projects, through: :members
   has_many :user_technologies
-  has_many :technologies, through :user_technologies
+  has_many :technologies, through: :user_technologies
 end
