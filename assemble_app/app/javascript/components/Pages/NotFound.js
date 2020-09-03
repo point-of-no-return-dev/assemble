@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
-import Header from "../Components/Header.js"
 
-class Index extends Component {
+class NotFound extends Component {
     render() {
         return(
             <React.Fragment>
-                <p>Index Page</p>
+                <p>Sorry, page not found</p>
             </React.Fragment>
         )
     }
 }
-export default Index
+export default NotFound

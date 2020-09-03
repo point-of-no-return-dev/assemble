@@ -4,6 +4,7 @@ class ProjectNew extends Component {
     render() {
         return(
             <React.Fragment>
+                <p>Project New Page</p>
 
             </React.Fragment>
         )

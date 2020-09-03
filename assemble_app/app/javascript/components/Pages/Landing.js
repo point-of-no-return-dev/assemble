@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Header from '../components/Header';
 import { Jumbotron, Button, Container, Row, Col } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -8,12 +7,6 @@ class Landing extends Component {
     render() {
         return(
             <React.Fragment>
-                <Header
-                    // These routes come from devise and you can see them in 'app/views/index.html.erb'
-                    logged_in = {this.props.logged_in}
-                    sign_in_route = {this.props.sign_in_route}
-                    sign_out_route = {this.props.sign_out_route}
-                />
                 <div>
                     <Jumbotron>
                         <h1 className="display-3">CREATE.FIND.ASSEMBLE.</h1>
@@ -71,8 +64,7 @@ class Landing extends Component {
                         </Col>
                     </Row>
                 </Container>
-
-                <Footer />
+                
             </React.Fragment>
         )
     }
