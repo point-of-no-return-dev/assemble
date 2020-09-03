@@ -5,69 +5,51 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#For users table
 user = [
     {
+        id: 1,
         email: "test@test.com",
         password: "123456",
-        password_confirmation: "123456"
-        first_name:
+        password_confirmation: "123456",
+        first_name: "Joe",
+        last_name: "Shmo"
     }
 ]
 
+#creates user object
 user.each do |attribute|
     User.create attribute
 end
 
-apartments = [
+#For projects table
+projects = [
     {
-        street: "3946 Camino Lindo",
-        city: "San Diego",
-        state: "CA",
-        manager: "Joe",
-        email: "joe@test.com",
-        price: "1000",
-        bedrooms: 2,
-        bathrooms: 2,
-        pets: "yes"
+        id: 1,
+        name: "Assemble",
+        description: "We ask that you know the difference between capital and lower case letters and when to use them."
 
     },
     {
-        street: "2468 Whodoweappreciate Ln.",
-        city: "San Diego",
-        state: "CA",
-        manager: "Tom Bumbadill",
-        email: "tom.bumbadill@test.com",
-        price: "9001",
-        bedrooms: 2,
-        bathrooms: 2,
-        pets: "Yes"
-    },
-    {
-        street: "123 Hill St.",
-        city: "Los Angeles",
-        state: "CA",
-        manager: "Tom Bumbadill",
-        email: "tom.bumbadill@test.com",
-        price: "350",
-        bedrooms: 2,
-        bathrooms: 2,
-        pets: "Yes"
-    },
-    {
-        street: "2120 Governor Dr.",
-        city: "San Diego",
-        state: "CA",
-        manager: "Tom Bumbadill",
-        email: "tom.bumbadill@test.com",
-        price: "1200",
-        bedrooms: 3,
-        bathrooms: 2,
-        pets: "No"
+        id: 2,
+        name: "Pet Wellness App",
+        description: "It's like a personal assistant for all of your pet needs."
     }
 ]
 
+#Creates project objects
+projects.each do |attribute|
+    Project.create attribute
+end
+
+#For Member table
+test_project1 = Project.first
+test_project2 = Project.last
+
 test_user = User.first
 
-apartments.each do |attribute|
-    test_user.apartments.create attribute
-end
+#Is this the right way to create Member objects??
+Member.create user_id: test_user.id, project_id: test_project1.id, is_owner: true
+Member.create user_id: test_user.id, project_id: test_project2.id, is_owner: true
