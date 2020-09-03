@@ -7,6 +7,7 @@ import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
 import ProjectShow from "./Pages/ProjectShow.js"
 import ProjectEdit from "./Pages/ProjectEdit.js"
+import NotFound from "./Pages/NotFound.js"
 import {
   BrowserRouter as Router,
   Route,
@@ -83,6 +84,7 @@ class App extends React.Component {
               />
             }
           />
+          <Route component={ NotFound }/>
         </Switch>
         <Footer />
       </Router>
