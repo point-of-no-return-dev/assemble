@@ -705,3 +705,448 @@ Module not found: Error: Can't resolve '../components/Header' in '/Users/learnac
 Completed 200 OK in 7307ms (Views: 7306.2ms | ActiveRecord: 0.0ms | Allocations: 9121)
 
 
+Started GET "/" for ::1 at 2020-09-03 10:42:54 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 384)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-09-03 10:43:00 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 65)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 628663410dbc5df43162
+Version: webpack 4.44.1
+Time: 19465ms
+Built at: 09/03/2020 10:43:16 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a7b3872456495bdb5c1a.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-a7b3872456495bdb5c1a.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f021fcf514ced70e5619.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f021fcf514ced70e5619.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a7b3872456495bdb5c1a.js js/application-a7b3872456495bdb5c1a.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-f021fcf514ced70e5619.js js/server_rendering-f021fcf514ced70e5619.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+Completed 200 OK in 22420ms (Views: 22416.1ms | ActiveRecord: 0.0ms | Allocations: 37355)
+
+
+[Webpacker] Compilation failed:
+Hash: 628663410dbc5df43162
+Version: webpack 4.44.1
+Time: 14175ms
+Built at: 09/03/2020 10:43:17 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a7b3872456495bdb5c1a.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-a7b3872456495bdb5c1a.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-f021fcf514ced70e5619.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-f021fcf514ced70e5619.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a7b3872456495bdb5c1a.js js/application-a7b3872456495bdb5c1a.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-f021fcf514ced70e5619.js js/server_rendering-f021fcf514ced70e5619.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 17338ms (Views: 17335.6ms | ActiveRecord: 0.0ms | Allocations: 12932)
+
+
+Started GET "/sign-up" for ::1 at 2020-09-03 10:46:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/sign-up"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/index" for ::1 at 2020-09-03 10:46:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-03 10:46:51 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 66)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 2e6d403e2e65d94d964e
+Version: webpack 4.44.1
+Time: 3793ms
+Built at: 09/03/2020 10:46:57 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-44db18fda2ead3e3c44c.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-44db18fda2ead3e3c44c.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-42fdf6e5b636a905b74e.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-42fdf6e5b636a905b74e.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-44db18fda2ead3e3c44c.js js/application-44db18fda2ead3e3c44c.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-42fdf6e5b636a905b74e.js js/server_rendering-42fdf6e5b636a905b74e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+Completed 200 OK in 5719ms (Views: 5718.0ms | ActiveRecord: 0.0ms | Allocations: 9298)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-03 10:47:01 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 199)
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 511)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 48.6ms | Allocations: 7229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 65.2ms | ActiveRecord: 10.9ms | Allocations: 22090)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-03 10:50:20 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 9274)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:50:43 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 51dceceb9357c9d512de
+Version: webpack 4.44.1
+Time: 3546ms
+Built at: 09/03/2020 10:50:48 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d75dc266541b08525a2f.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-d75dc266541b08525a2f.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-74f1c6f6020574bcc5d2.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-74f1c6f6020574bcc5d2.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-d75dc266541b08525a2f.js js/application-d75dc266541b08525a2f.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-74f1c6f6020574bcc5d2.js js/server_rendering-74f1c6f6020574bcc5d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 4941ms (Views: 4940.6ms | ActiveRecord: 0.0ms | Allocations: 9208)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-03 10:50:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 201)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1900)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 27.0ms | ActiveRecord: 16.8ms | Allocations: 16310)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-03 10:50:56 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 9082)
+
+
+Started POST "/users" for ::1 at 2020-09-03 10:51:04 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"nxrsP8Sa1qW/Y1q1Tk4DP0GUxqjUSAIcTSupGsa9JoHhvSK6AGGRHEaL1jAdPKQJqXZvmMVzDdV1WCtxIyfvjA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (12.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$12$EL2bUvIBRxvMlzScdI5O4OaH/Op7yx7eF8aP69mXY23BWTBRNfPqu"], ["created_at", "2020-09-03 17:51:04.346072"], ["updated_at", "2020-09-03 17:51:04.346072"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 289ms (ActiveRecord: 16.4ms | Allocations: 10641)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:51:04 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 7806)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-03 10:51:08 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms | Allocations: 2196)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:51:08 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 7728)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:51:47 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 64)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 8b871e5d8777993d6206
+Version: webpack 4.44.1
+Time: 3552ms
+Built at: 09/03/2020 10:51:52 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a7446c0ddafa5ccb19f2.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-a7446c0ddafa5ccb19f2.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-1df7f2523cbf2ce1ece4.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1df7f2523cbf2ce1ece4.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-a7446c0ddafa5ccb19f2.js js/application-a7446c0ddafa5ccb19f2.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-1df7f2523cbf2ce1ece4.js js/server_rendering-1df7f2523cbf2ce1ece4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/server_rendering.js
+
+Completed 200 OK in 4967ms (Views: 4966.2ms | ActiveRecord: 0.0ms | Allocations: 9227)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-03 10:53:16 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 42ms (ActiveRecord: 24.9ms | Allocations: 7540)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:53:16 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 4da3d69c408a0d180f3e
+Version: webpack 4.44.1
+Time: 4905ms
+Built at: 09/03/2020 10:53:23 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-07043e82ee3cb31c89aa.js  2.17 MiB       application  [emitted] [immutable]  application
+     js/application-07043e82ee3cb31c89aa.js.map  2.14 MiB       application  [emitted] [dev]        application
+         js/hello_react-41b9480532047ddb1a4e.js  1.05 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-41b9480532047ddb1a4e.js.map  1.21 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-22a42bb908264777dcf1.js  2.05 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-22a42bb908264777dcf1.js.map     2 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-07043e82ee3cb31c89aa.js js/application-07043e82ee3cb31c89aa.js.map
+Entrypoint hello_react = js/hello_react-41b9480532047ddb1a4e.js js/hello_react-41b9480532047ddb1a4e.js.map
+Entrypoint server_rendering = js/server_rendering-22a42bb908264777dcf1.js js/server_rendering-22a42bb908264777dcf1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 557 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.09 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 202 hidden modules
+
+ERROR in ./app/javascript/components/Pages/Landing.js
+Module not found: Error: [CaseSensitivePathsPlugin] `/Users/learnacademy/Desktop/capstone/assemble/assemble_app/app/javascript/components/components/Header.js` does not match the corresponding path on disk `Components`.
+ @ ./app/javascript/components/Pages/Landing.js 24:0-42 49:42-48
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+Completed 200 OK in 6774ms (Views: 6772.7ms | ActiveRecord: 0.0ms | Allocations: 9304)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-03 10:53:23 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 2000)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:53:23 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7810)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-03 10:53:31 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 17.3ms | Allocations: 2105)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:53:31 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 7749)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-03 10:53:34 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 8.7ms | Allocations: 2015)
+
+
+Started GET "/" for ::1 at 2020-09-03 10:53:34 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 7732)
+
+
