@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Header from "./Components/Header.js"
+import Footer from "./Components/Footer.js"
 import {
   BrowserRouter as Router,
   Route,
@@ -24,6 +25,7 @@ class App extends React.Component {
           sign_in_route={ sign_in_route }
           sign_out_route={ sign_out_route }
         />
+        <Footer />
       </Router>
     );
   }
