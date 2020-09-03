@@ -49,10 +49,10 @@ class Landing extends Component {
                 <Container className="themed-container" fluid={true}>
                     <Row xs="2">
                         <Col>
-                            <p>About Create.</p>
+                            <img src="" alt = "Some image showing create" />
                         </Col>
                         <Col>
-                            <img src="" alt = "Some image showing create" />
+                            <p>About Find.</p>
                         </Col>
                     </Row>
                 </Container>
@@ -64,7 +64,7 @@ class Landing extends Component {
                 <Container className="themed-container" fluid={true}>
                     <Row xs="2">
                         <Col>
-                            <p>About Create.</p>
+                            <p>About Assemble.</p>
                         </Col>
                         <Col>
                             <img src="" alt = "Some image showing create" />
