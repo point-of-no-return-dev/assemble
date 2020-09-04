@@ -22,15 +22,18 @@ class App extends React.Component {
     }
   }
 
-  componentDidMoun() {
-    fetch("/projects")
-    .then(response => {
-      if(response.status === 200) {
-        return (response.json())
-      } 
-    }
-  } 
+  // componentDidMoun() {
+  //   fetch("/projects")
+  //   .then(response => {
+  //     if(response.status === 200) {
+  //       return (response.json())
+  //     } 
+  //   }
+  // } 
 
+  createNewProject = (newproject) => {
+    console.log(newproject)
+  }
 
   render () {
     const {
@@ -95,6 +98,7 @@ class App extends React.Component {
             render={ (props) =>
               <ProjectNew
                 //Make a createNewProject method to pass as a prop
+                createNewProject={this.createNewProject}
                 current_user={current_user}
                 // Update State
               />
@@ -109,3 +113,4 @@ class App extends React.Component {
 }
 
 export default App
+
