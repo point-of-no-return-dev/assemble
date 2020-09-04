@@ -44,19 +44,19 @@ class ProjectNew extends React.Component{
                     <FormGroup>
                         <Label>Project Name</Label>
                         <Input
-                        type="text"
-                        name="street"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.name }
+                            type="text"
+                            name="name"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.name }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Project Description</Label>
                         <Input
-                        type="text"
-                        name="city"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.description }
+                            type="text"
+                            name="description"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.description }
                         />
                     </FormGroup>
                     <Button
