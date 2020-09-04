@@ -20,7 +20,8 @@ class Landing extends Component {
                     </Jumbotron>
                 </div>
 
-                //For Create Section
+                {/* //For Create Section */}
+
                 <div className="landing-section-header">
                     <h3>CREATE.</h3>
                 </div>
@@ -35,7 +36,8 @@ class Landing extends Component {
                     </Row>
                 </Container>
 
-                //For Find Secion
+
+                {/* //For Find Secion */}
                 <div className="landing-section-header">
                     <h3>FIND.</h3>
                 </div>
@@ -50,7 +52,7 @@ class Landing extends Component {
                     </Row>
                 </Container>
 
-                //For Assemble Section
+                {/* //For Assemble Section */}
                 <div className="landing-section-header">
                     <h3>ASSEMBLE.</h3>
                 </div>
