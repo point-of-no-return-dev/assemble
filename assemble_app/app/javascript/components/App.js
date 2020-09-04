@@ -21,8 +21,34 @@ class App extends React.Component {
     super(props)
     this.state = {
       projects: [],
+      projectsToBeShown: [],
+      currentFiltersSelected: [],
     }
   }
+
+  updateCurrentFiltersSelected = (filterOption) => {
+    //Check to see if the filterOption is in the curentFiltersSelected
+    //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
+    if (currentFiltersSelected.includes(filterOption)) {
+      //Declare an array of filters that we can alter
+      let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+      //Delcare a variable for the index of filter options for readability
+      let filterIndex = newCurrentFiltersSelectedArray.indexOf(filterOption);
+      //Splice the selected options from the filtersArray
+      newCurrentFiltersSelectedArray.splice(filterIndex, 1); 
+      //setState to the updated array
+      this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray})
+    //If it is, create a new array that is a copy of the old state, minus the filteredOption
+    } else {
+        //Declare an array of filters that we can alter
+        let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+        //Splice the selected options from the filtersArray
+        newCurrentFiltersSelectedArray.push(filterOption);
+        //setState to the updated array
+        this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray});
+    }
+  }
+   
 
   componentDidMount() {
     fetch("/projects")
@@ -96,7 +122,9 @@ class App extends React.Component {
             path="/index"
             render={ (props) =>
               <Index
-                let projects = { this.state.projects }
+                projects = { this.state.projects }
+                projectsToBeShown = { this.state.projectsToBeShown }
+                currentFiltersSelected = { this.state.currentFiltersSelected }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
