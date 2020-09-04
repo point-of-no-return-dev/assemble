@@ -37,36 +37,43 @@ class ProjectNew extends React.Component{
         this.setState({ success: true })
     }
 
+
     render() {
         return(
             <React.Fragment>
-                <Form>
-                    <FormGroup>
-                        <Label>Project Name</Label>
-                        <Input
-                            type="text"
-                            name="name"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.name }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Project Description</Label>
-                        <Input
-                            type="text"
-                            name="description"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.description }
-                        />
-                    </FormGroup>
-                    <Button
-                        name="submit"
-                        color="secondary"
-                        onClick={ this.handleSubmit }
-                    >
-                        Create a Project
-                    </Button>
-                </Form>
+
+                <div className="body-container">
+                    <div className="form">
+                        <Form>
+                            <FormGroup>
+                                <Label>Project Name</Label>
+                                <Input
+                                    type="text"
+                                    name="name"
+                                    onChange={ this.handleChange }
+                                    value={ this.state.form.name }
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Project Description</Label>
+                                <Input
+                                    type="text"
+                                    name="description"
+                                    onChange={ this.handleChange }
+                                    value={ this.state.form.description }
+                                />
+                            </FormGroup>
+                            <Button
+                                name="submit"
+                                color="secondary"
+                                onClick={ this.handleSubmit }
+                            >
+                                Create a Project
+                            </Button>
+                        </Form>
+                    </div>
+                </div>
+
                 { this.state.success && <Redirect to="/" />}
             </React.Fragment>
         )
