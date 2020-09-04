@@ -7,6 +7,7 @@ import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
 import ProjectShow from "./Pages/ProjectShow.js"
 import ProjectEdit from "./Pages/ProjectEdit.js"
+import AboutUs from "./Pages/AboutUs.js"
 import NotFound from "./Pages/NotFound.js"
 import {
   BrowserRouter as Router,
@@ -110,6 +111,12 @@ class App extends React.Component {
                 current_user={current_user}
                 // Update State
               />
+            }
+          />
+          <Route 
+            path="/aboutus"
+            render={ (props) =>
+              <AboutUs/>
             }
           />
           <Route component={ NotFound }/>
