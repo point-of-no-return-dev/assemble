@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from "react"
 import {
     Form,
     FormGroup,
@@ -9,18 +9,19 @@ import {
   import { Redirect } from 'react-router-dom';
 
 
-class ProjectNew extends Component {
+
+class ProjectNew extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            form:{
+            form: {
                 name: "",
                 description: ""
             },
-        success: false
+            success: false
         }
     }
-
+    
     handleChange = (e) => {
         // destructuring form out of state
         let { form } = this.state
@@ -46,7 +47,7 @@ class ProjectNew extends Component {
                         type="text"
                         name="street"
                         onChange={ this.handleChange }
-                        value={ this.state.form.street }
+                        value={ this.state.form.name }
                         />
                     </FormGroup>
                     <FormGroup>
@@ -55,7 +56,7 @@ class ProjectNew extends Component {
                         type="text"
                         name="city"
                         onChange={ this.handleChange }
-                        value={ this.state.form.city }
+                        value={ this.state.form.description }
                         />
                     </FormGroup>
                     <Button

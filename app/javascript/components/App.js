@@ -55,6 +55,7 @@ import {
       // if the response is good  - reload the cats
       if(response.status === 200){
         this.componentDidMount()
+        console.log("create status:", response.status);
       }
       return response
     })
