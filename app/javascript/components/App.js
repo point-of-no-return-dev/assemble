@@ -16,20 +16,7 @@ import {
 
 
 class App extends React.Component {
-  // constructor(props) {
-  //   this.state = {
-  //     projects: [],
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   fetch("/projects")
-  //   .then(response => {
-  //     if(response.status === 200) {
-  //       return (response.json())
-  //     } 
-  //   })
-  // }
+  
   
   
 
