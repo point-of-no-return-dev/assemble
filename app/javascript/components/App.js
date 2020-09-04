@@ -7,6 +7,7 @@ import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
 import ProjectShow from "./Pages/ProjectShow.js"
 import ProjectEdit from "./Pages/ProjectEdit.js"
+import AboutUs from "./Pages/AboutUs.js"
 import NotFound from "./Pages/NotFound.js"
 import {
   BrowserRouter as Router,
@@ -46,6 +47,7 @@ class App extends React.Component {
       current_user
     } = this.props
     console.log("logged_in", logged_in);
+    console.log(this.state.projects);
     return (
       <Router>
         <Header
@@ -69,6 +71,7 @@ class App extends React.Component {
             path="/index"
             render={ (props) =>
               <Index
+                let projects = { this.state.projects }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
@@ -83,7 +86,9 @@ class App extends React.Component {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
               return (
-                <ProjectShow project = {project}/>
+                <ProjectShow 
+                  project = {project}
+                />
               )
             }}
           />
@@ -106,6 +111,12 @@ class App extends React.Component {
                 current_user={current_user}
                 // Update State
               />
+            }
+          />
+          <Route 
+            path="/aboutus"
+            render={ (props) =>
+              <AboutUs/>
             }
           />
           <Route component={ NotFound }/>
