@@ -35,8 +35,7 @@ class App extends React.Component {
       .catch(errors => {
         console.log("index errors:", errors)
       })
-    }
-  } 
+  }
 
   render () {
     const {
@@ -115,5 +114,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 export default App
