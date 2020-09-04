@@ -22,15 +22,21 @@ class App extends React.Component {
     }
   }
 
-  componentDidMoun() {
+  componentDidMount() {
     fetch("/projects")
     .then(response => {
       if(response.status === 200) {
-        return (response.json())
-      } 
+        return response.json()
+      }
+    })
+      .then(projectArray => {
+        this.setState({projects: projectArray})
+      })
+      .catch(errors => {
+        console.log("index errors:", errors)
+      })
     }
   } 
-
 
   render () {
     const {
@@ -70,6 +76,7 @@ class App extends React.Component {
               />
             }
           />
+
           <Route
             path={"/project_show/:id"}
             render={ (props) => {
@@ -80,6 +87,7 @@ class App extends React.Component {
               )
             }}
           />
+          
           <Route
             path={"/project_edit/:id"}
             render={ (props) => {
