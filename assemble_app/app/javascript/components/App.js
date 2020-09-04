@@ -14,7 +14,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-
+// import mockApartments from './mockApartments.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -28,15 +28,40 @@ class App extends React.Component {
     fetch("/projects")
     .then(response => {
       if(response.status === 200) {
+        console.log("status:", response.status);
         return response.json()
       }
     })
       .then(projectArray => {
-        this.setState({projects: projectArray})
+        this.setState({ projects: projectArray })
       })
       .catch(errors => {
         console.log("index errors:", errors)
       })
+  }
+
+  createNewProject = (project) => {
+    return fetch("/projects", {
+      // converting an object to a string
+      body: JSON.stringify(project),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "POST"
+    })
+    .then(response => {
+      // if the response is good  - reload the cats
+      if(response.status === 200){
+        this.componentDidMount()
+        console.log("create status:", response.status);
+      }
+      return response
+    })
+    .catch(errors => {
+      console.log("create errors:", errors)
+    })
   }
 
   render () {
@@ -108,8 +133,8 @@ class App extends React.Component {
             render={ (props) =>
               <ProjectNew
                 //Make a createNewProject method to pass as a prop
+                createNewProject={this.createNewProject}
                 current_user={current_user}
-                // Update State
               />
             }
           />
@@ -129,3 +154,4 @@ class App extends React.Component {
 
 
 export default App
+
