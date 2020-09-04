@@ -16,23 +16,27 @@ import {
 
 
 class App extends React.Component {
-  // constructor(props) {
-  //   this.state = {
-  //     projects: [],
-  //   }
-  // }
+  constructor(props) {
+    super(props)
+    this.state = {
+      projects: [],
+    }
+  }
 
-  // componentDidMount() {
-  //   fetch("/projects")
-  //   .then(response => {
-  //     if(response.status === 200) {
-  //       return (response.json())
-  //     } 
-  //   })
-  // }
-  
-  
-
+  componentDidMount() {
+    fetch("/projects")
+    .then(response => {
+      if(response.status === 200) {
+        return response.json()
+      }
+    })
+      .then(projectArray => {
+        this.setState({projects: projectArray})
+      })
+      .catch(errors => {
+        console.log("index errors:", errors)
+      })
+  }
 
   render () {
     const {
@@ -72,6 +76,7 @@ class App extends React.Component {
               />
             }
           />
+
           <Route
             path={"/project_show/:id"}
             render={ (props) => {
@@ -82,6 +87,7 @@ class App extends React.Component {
               )
             }}
           />
+          
           <Route
             path={"/project_edit/:id"}
             render={ (props) => {
