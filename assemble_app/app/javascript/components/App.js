@@ -46,6 +46,7 @@ class App extends React.Component {
       current_user
     } = this.props
     console.log("logged_in", logged_in);
+    console.log(this.state.projects);
     return (
       <Router>
         <Header
@@ -69,6 +70,7 @@ class App extends React.Component {
             path="/index"
             render={ (props) =>
               <Index
+                let projects = { this.state.projects }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
@@ -83,7 +85,9 @@ class App extends React.Component {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
               return (
-                <ProjectShow project = {project}/>
+                <ProjectShow 
+                  project = {project}
+                />
               )
             }}
           />
