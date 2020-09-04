@@ -9,7 +9,6 @@ import {
   import { Redirect } from 'react-router-dom';
 
 
-
 class ProjectNew extends Component {
     constructor(props){
         super(props)
@@ -17,7 +16,8 @@ class ProjectNew extends Component {
             form:{
                 name: "",
                 description: ""
-            }
+            },
+        success: false
         }
     }
 
@@ -27,13 +27,14 @@ class ProjectNew extends Component {
         form[e.target.name] = e.target.value
         // setting state to the updated form
         this.setState({ form: form })
-      }
+    }
 
-      handleSubmit = (e) => {
+    handleSubmit = (e) => {
         // keeps react from refreshing the page unnecessarily
         e.preventDefault()
         this.props.createNewProject(this.state.form)
-      }
+        this.setState({ success: true })
+    }
 
     render() {
         return(
@@ -65,6 +66,7 @@ class ProjectNew extends Component {
                         Create a Project
                     </Button>
                 </Form>
+                { this.state.success && <Redirect to="/" />}
             </React.Fragment>
         )
     }

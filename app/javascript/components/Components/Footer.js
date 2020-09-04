@@ -13,7 +13,7 @@ class Footer extends Component{
         <Navbar className="footer" color="light" light expand="md">
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">About Us</NavLink>
+              <NavLink href="/aboutus">About Us</NavLink>
               <p> © 2020 Assemble.</p>
             </NavItem>
           </Nav>
