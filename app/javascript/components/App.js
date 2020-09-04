@@ -16,20 +16,22 @@ import {
 
 
 class App extends React.Component {
-  constructor(props) {
-    this.state = {
-      projects: [],
-    }
-  }
+  // constructor(props) {
+  //   this.state = {
+  //     projects: [],
+  //   }
+  // }
 
-  componentDidMoun() {
-    fetch("/projects")
-    .then(response => {
-      if(response.status === 200) {
-        return (response.json())
-      } 
-    }
-  } 
+  // componentDidMount() {
+  //   fetch("/projects")
+  //   .then(response => {
+  //     if(response.status === 200) {
+  //       return (response.json())
+  //     } 
+  //   })
+  // }
+  
+  
 
 
   render () {
@@ -107,5 +109,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 export default App

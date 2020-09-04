@@ -21,7 +21,7 @@ class Landing extends Component {
                 </div>
 
                 //For Create Section
-                <div class="landing-section-header">
+                <div className="landing-section-header">
                     <h3>CREATE.</h3>
                 </div>
                 <Container className="themed-container" fluid={true}>
@@ -36,7 +36,7 @@ class Landing extends Component {
                 </Container>
 
                 //For Find Secion
-                <div class="landing-section-header">
+                <div className="landing-section-header">
                     <h3>FIND.</h3>
                 </div>
                 <Container className="themed-container" fluid={true}>
@@ -51,7 +51,7 @@ class Landing extends Component {
                 </Container>
 
                 //For Assemble Section
-                <div class="landing-section-header">
+                <div className="landing-section-header">
                     <h3>ASSEMBLE.</h3>
                 </div>
                 <Container className="themed-container" fluid={true}>
