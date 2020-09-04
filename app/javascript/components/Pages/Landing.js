@@ -21,6 +21,7 @@ class Landing extends Component {
                 </div>
 
                 {/* //For Create Section */}
+
                 <div className="landing-section-header">
                     <h3>CREATE.</h3>
                 </div>
@@ -34,6 +35,7 @@ class Landing extends Component {
                         </Col>
                     </Row>
                 </Container>
+
 
                 {/* //For Find Secion */}
                 <div className="landing-section-header">

@@ -7,6 +7,7 @@ import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
 import ProjectShow from "./Pages/ProjectShow.js"
 import ProjectEdit from "./Pages/ProjectEdit.js"
+import AboutUs from "./Pages/AboutUs.js"
 import NotFound from "./Pages/NotFound.js"
 import {
   BrowserRouter as Router,
@@ -15,15 +16,14 @@ import {
 } from 'react-router-dom'
 // import mockApartments from './mockApartments.js'
 
-
-  class App extends React.Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        projects: [],
-      }
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      projects: [],
     }
-  
+  }
+
   componentDidMount() {
     fetch("/projects")
     .then(response => {
@@ -64,7 +64,6 @@ import {
     })
   }
 
-  
   render () {
     const {
       logged_in,
@@ -97,6 +96,7 @@ import {
             path="/index"
             render={ (props) =>
               <Index
+                let projects = { this.state.projects }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
@@ -104,16 +104,20 @@ import {
               />
             }
           />
+
           <Route
             path={"/project_show/:id"}
             render={ (props) => {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
               return (
-                <ProjectShow project = {project}/>
+                <ProjectShow 
+                  project = {project}
+                />
               )
             }}
           />
+          
           <Route
             path={"/project_edit/:id"}
             render={ (props) => {
@@ -134,6 +138,12 @@ import {
               />
             }
           />
+          <Route 
+            path="/aboutus"
+            render={ (props) =>
+              <AboutUs/>
+            }
+          />
           <Route component={ NotFound }/>
         </Switch>
         <Footer />
@@ -141,6 +151,7 @@ import {
     );
   }
 }
+
 
 export default App
 
