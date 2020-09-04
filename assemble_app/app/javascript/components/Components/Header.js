@@ -39,6 +39,9 @@ class Header extends Component {
                         <NavItem>
                             <NavLink to="/index">View Projects</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink to="/project_new">Add a Project</NavLink>
+                        </NavItem>
                         {/* you see this if you're signed in */}
                         { this.props.logged_in &&
                         <>

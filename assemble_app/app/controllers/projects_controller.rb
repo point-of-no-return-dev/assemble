@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+    def index
+        projects = Project.all
+        render json: projects
+    end
 
     def create
         project = Project.create(project_params)
