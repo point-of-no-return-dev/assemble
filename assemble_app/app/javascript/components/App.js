@@ -16,6 +16,22 @@ import {
 
 
 class App extends React.Component {
+  constructor(props) {
+    this.state = {
+      projects: [],
+    }
+  }
+
+  componentDidMoun() {
+    fetch("/projects")
+    .then(response => {
+      if(response.status === 200) {
+        return (response.json())
+      } 
+    }
+  } 
+
+
   render () {
     const {
       logged_in,
