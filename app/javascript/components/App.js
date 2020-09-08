@@ -44,12 +44,18 @@ class App extends React.Component {
         //Declare an array of filters that we can alter
         let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
         //Splice the selected options from the filtersArray
-        newCurrentFiltersSelectedArray.push(filterOption);
+        newCurrentFiltersSelectedArray.push(parseInt(filterOption));
         //setState to the updated array
         this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray});
     }
   }
    
+  // This method compares currentFiltersSelected with the Table project_technologies 
+  compareWithTech = () => {
+    // Compare values in currentFiltersSelected with technology_id of project_technologies
+
+    // Push into an array into projectToBeShown if it matches any number in currentFiltersSelected with technology_id
+  }
 
   componentDidMount() {
     fetch("/projects")

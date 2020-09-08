@@ -22,8 +22,7 @@ class Filter extends Component{
         console.log("filterOption:", filterOption);
         // setting state to the updated form
         this.props.updateCurrentFiltersSelected(filterOption)
-        // console.log("currentFiltersSelected:", this.props.currentFiltersSelected);
-        console.log("updateCurrentFiltersSelected:", this.props.updateCurrentFiltersSelected);
+        console.log("currentFiltersSelected:", this.props.currentFiltersSelected);
     }
 
   render(){
@@ -38,7 +37,8 @@ class Filter extends Component{
                                 <Input 
                                     type="checkbox" 
                                     id="checkbox1" 
-                                    value= "HTML"
+                                    value= "1"
+                                    name= "HTML"
                                     onChange = { this.handleChange }
                                     />{' '}
                                 HTML
@@ -47,7 +47,8 @@ class Filter extends Component{
                                 <Input 
                                     type="checkbox" 
                                     id="checkbox1" 
-                                    value= "CSS"
+                                    value= "2"
+                                    name= "CSS"
                                     onChange = { this.handleChange }
                                     />{' '}
                                 CSS
@@ -56,7 +57,8 @@ class Filter extends Component{
                                 <Input 
                                     type="checkbox" 
                                     id="checkbox1" 
-                                    value= "JavaScript"
+                                    value= "3"
+                                    name= "JavaScript"
                                     onChange = { this.handleChange }
                                     />{' '}
                                 JavaScript
