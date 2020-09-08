@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "./Components/Header.js"
 import Footer from "./Components/Footer.js"
+import Filter from "./Components/Filter.js"
 import Landing from "./Pages/Landing.js"
 import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
@@ -29,7 +30,7 @@ class App extends React.Component {
   updateCurrentFiltersSelected = (filterOption) => {
     //Check to see if the filterOption is in the curentFiltersSelected
     //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
-    if (currentFiltersSelected.includes(filterOption)) {
+    if (this.state.currentFiltersSelected.includes(filterOption)) {
       //Declare an array of filters that we can alter
       let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
       //Delcare a variable for the index of filter options for readability
@@ -107,6 +108,7 @@ class App extends React.Component {
           sign_out_route={ sign_out_route }
         />
         <Switch>
+
           <Route
             exact path="/"
             render={ (props) =>
@@ -122,14 +124,16 @@ class App extends React.Component {
             path="/index"
             render={ (props) =>
               <Index
+                updateCurrentFiltersSelected = { this.updateCurrentFiltersSelected }
+                currentFiltersSelected = { this.state.currentFiltersSelected }
                 projects = { this.state.projects }
                 projectsToBeShown = { this.state.projectsToBeShown }
-                currentFiltersSelected = { this.state.currentFiltersSelected }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
                 // Update State
               />
+              
             }
           />
 
