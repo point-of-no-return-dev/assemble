@@ -1,12 +1,21 @@
 import React, {Component} from 'react'
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import Filter from '../Components/Filter.js'
 
 
 class Index extends Component {
     render() {
         return(
             <React.Fragment>
+                <Filter 
+                    projects = { this.props.projects }
+                    projectsToBeShown = { this.props.projectsToBeShown }
+                    currentFiltersSelected = { this.props.currentFiltersSelected }
+                    updateCurrentFiltersSelected = { this.props.updateCurrentFiltersSelected }
+                    handleChange = { this.props.handleChange }
+                />
+
                 <h3>All the Projects</h3>
                 <Row id="cards">
 

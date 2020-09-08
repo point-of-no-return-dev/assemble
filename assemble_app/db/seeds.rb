@@ -30,7 +30,6 @@ projects = [
         id: 1,
         name: "Assemble",
         description: "We ask that you know the difference between capital and lower case letters and when to use them."
-
     },
     {
         id: 2,
