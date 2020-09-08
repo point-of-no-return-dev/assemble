@@ -1,12 +1,17 @@
 import React, {Component} from 'react'
+
+import Filter from "../Components/Filter.js"
+
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
-
 
 class Index extends Component {
     render() {
         return(
             <React.Fragment>
+                <h2>CREATE. FIND. ASSEMBLE.</h2>
+                <h5>View projects below.</h5>
+                <Filter />
                 <h3>All the Projects</h3>
                 <Row id="cards">
 
