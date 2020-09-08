@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-
-import Filter from "../Components/Filter.js"
-
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 import Filter from '../Components/Filter.js'
@@ -10,7 +7,6 @@ class Index extends Component {
     render() {
         return(
             <React.Fragment>
-<<<<<<< HEAD
                 <Filter 
                     projects = { this.props.projects }
                     projectsToBeShown = { this.props.projectsToBeShown }
@@ -18,12 +14,8 @@ class Index extends Component {
                     updateCurrentFiltersSelected = { this.props.updateCurrentFiltersSelected }
                     handleChange = { this.props.handleChange }
                 />
-
-=======
                 <h2>CREATE. FIND. ASSEMBLE.</h2>
                 <h5>View projects below.</h5>
-                <Filter />
->>>>>>> a28353a42bac725ae5033f0ba48d83426541275b
                 <h3>All the Projects</h3>
                 <Row id="cards">
 
