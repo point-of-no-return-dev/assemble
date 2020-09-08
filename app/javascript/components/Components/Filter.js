@@ -20,7 +20,7 @@ class Filter extends Component{
           <div className="filter-container">
             {/* <Row xs="1" sm="2" md="3"> */}
                 <FormGroup row>
-                    <Label for="checkbox1">Front-end Web Dev</Label>
+                    <Label for="checkbox1">Front-end Web Dev Headline</Label>
                     <Col>
                         <FormGroup check>
                             <Label check>
