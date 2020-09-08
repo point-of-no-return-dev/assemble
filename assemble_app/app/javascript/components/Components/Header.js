@@ -46,6 +46,13 @@ class Header extends Component {
                         { this.props.logged_in &&
                         <>
                             <NavItem>
+                                {/* Need this NavLink to lead to the current_user's profile. */}
+                                <NavLink to="#">My Profile</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/projectnew">Create a Project</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <a href={ this.props.sign_out_route }>Sign Out</a>
                             </NavItem>
                         </>

@@ -7,6 +7,7 @@ import Index from "./Pages/Index.js"
 import ProjectNew from "./Pages/ProjectNew.js"
 import ProjectShow from "./Pages/ProjectShow.js"
 import ProjectEdit from "./Pages/ProjectEdit.js"
+import AboutUs from "./Pages/AboutUs.js"
 import NotFound from "./Pages/NotFound.js"
 import {
   BrowserRouter as Router,
@@ -15,15 +16,40 @@ import {
 } from 'react-router-dom'
 // import mockApartments from './mockApartments.js'
 
-
-  class App extends React.Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        projects: [],
-      }
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      projects: [],
+      projectsToBeShown: [],
+      currentFiltersSelected: [],
     }
-  
+  }
+
+  updateCurrentFiltersSelected = (filterOption) => {
+    //Check to see if the filterOption is in the curentFiltersSelected
+    //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
+    if (currentFiltersSelected.includes(filterOption)) {
+      //Declare an array of filters that we can alter
+      let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+      //Delcare a variable for the index of filter options for readability
+      let filterIndex = newCurrentFiltersSelectedArray.indexOf(filterOption);
+      //Splice the selected options from the filtersArray
+      newCurrentFiltersSelectedArray.splice(filterIndex, 1); 
+      //setState to the updated array
+      this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray})
+    //If it is, create a new array that is a copy of the old state, minus the filteredOption
+    } else {
+        //Declare an array of filters that we can alter
+        let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+        //Splice the selected options from the filtersArray
+        newCurrentFiltersSelectedArray.push(filterOption);
+        //setState to the updated array
+        this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray});
+    }
+  }
+   
+
   componentDidMount() {
     fetch("/projects")
     .then(response => {
@@ -64,7 +90,6 @@ import {
     })
   }
 
-  
   render () {
     const {
       logged_in,
@@ -97,6 +122,9 @@ import {
             path="/index"
             render={ (props) =>
               <Index
+                projects = { this.state.projects }
+                projectsToBeShown = { this.state.projectsToBeShown }
+                currentFiltersSelected = { this.state.currentFiltersSelected }
                 logged_in={ logged_in }
                 sign_in_route={ sign_in_route }
                 sign_out_route={ sign_out_route }
@@ -104,16 +132,20 @@ import {
               />
             }
           />
+
           <Route
             path={"/project_show/:id"}
             render={ (props) => {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
               return (
-                <ProjectShow project = {project}/>
+                <ProjectShow 
+                  project = {project}
+                />
               )
             }}
           />
+          
           <Route
             path={"/project_edit/:id"}
             render={ (props) => {
@@ -134,6 +166,12 @@ import {
               />
             }
           />
+          <Route 
+            path="/aboutus"
+            render={ (props) =>
+              <AboutUs/>
+            }
+          />
           <Route component={ NotFound }/>
         </Switch>
         <Footer />
@@ -141,6 +179,7 @@ import {
     );
   }
 }
+
 
 export default App
 
