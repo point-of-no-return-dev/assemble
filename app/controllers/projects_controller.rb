@@ -23,6 +23,17 @@ class ProjectsController < ApplicationController
         end
     end
 
+    def destroy
+        project = Project.find(params[:id])
+        project.destroy
+        if project.valid?
+            render json: project
+        else
+            render json: project.errors
+        end
+    end
+
+
 
     private
     def project_params
