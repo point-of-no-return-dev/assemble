@@ -101,3 +101,4 @@ ProjectTechnology.create project_id: 1, technology_id: 1
 ProjectTechnology.create project_id: 2, technology_id: 2
 # Project 3 has JavaScript as a technology
 ProjectTechnology.create project_id: 3, technology_id: 3
+
