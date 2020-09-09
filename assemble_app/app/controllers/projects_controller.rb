@@ -13,6 +13,17 @@ class ProjectsController < ApplicationController
         end
     end
 
+    def update
+        project = Project.find(params[:id])
+        project.update(project_params)
+        if project.valid?
+            render json: project
+        else
+            render json: project.errors
+        end
+    end
+
+
     private
     def project_params
         params.require(:project).permit(:name, :description)
