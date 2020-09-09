@@ -74,7 +74,7 @@ class ProjectNew extends React.Component{
                     </div>
                 </div>
 
-                { this.state.success && <Redirect to="/" />}
+                { this.state.success && <Redirect to="/index" />}
             </React.Fragment>
         )
     }
