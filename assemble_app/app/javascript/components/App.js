@@ -24,6 +24,7 @@ class App extends React.Component {
       projects: [],
       projectsToBeShown: [],
       currentFiltersSelected: [],
+      projectTechnologies: []
       membersBelongingToCurrentUser: []
     }
   }
@@ -65,32 +66,52 @@ class App extends React.Component {
   updateCurrentFiltersSelected = (filterOption) => {
     //Check to see if the filterOption is in the curentFiltersSelected
     //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
-    if (this.state.currentFiltersSelected.includes(filterOption)) {
+    if (this.state.currentFiltersSelected.includes(parseInt(filterOption))) {
       //Declare an array of filters that we can alter
       let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+      console.log("alterable array", newCurrentFiltersSelectedArray);
       //Delcare a variable for the index of filter options for readability
-      let filterIndex = newCurrentFiltersSelectedArray.indexOf(filterOption);
+      let filterIndex = newCurrentFiltersSelectedArray.indexOf(parseInt(filterOption));
+      console.log("filter index", filterIndex);
       //Splice the selected options from the filtersArray
       newCurrentFiltersSelectedArray.splice(filterIndex, 1); 
+      console.log("after splice", newCurrentFiltersSelectedArray);
       //setState to the updated array
       this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray})
     //If it is, create a new array that is a copy of the old state, minus the filteredOption
     } else {
         //Declare an array of filters that we can alter
         let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
+        console.log("hey i'm else");
         //Splice the selected options from the filtersArray
         newCurrentFiltersSelectedArray.push(parseInt(filterOption));
         //setState to the updated array
         this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray});
     }
+    this.compareWithTech()
   }
    
   // This method compares currentFiltersSelected with the Table project_technologies 
-  compareWithTech = () => {
+  // currentFiltersSelected, projectTechnologies
+  compareWithTech = () =>{
     // Compare values in currentFiltersSelected with technology_id of project_technologies
-
-    // Push into an array into projectToBeShown if it matches any number in currentFiltersSelected with technology_id
+    // Returning filtered values that match each other based on value.technology_id array and the currentFiltersSelected array
+    console.log(this.state.projectTechnologies);
+    let compareArr = this.state.projectTechnologies.filter(value => {
+        return (this.state.currentFiltersSelected.includes(value.technology_id))
+        }
+    )
+    // gives us an array of ID's to find the projects we want shown
+    let projectsToBeShownIds = compareArr.map(value => {
+        return value.project_id
+    })
+    // filters through all our projects and grabs all the projects with matching ID's in our projectsToBeShownIds array 
+    let newIndex = this.state.projects.filter(value => {
+      return (projectsToBeShownIds.includes(value.id))
+    })
+    this.setState( {projectsToBeShown: newIndex} );
   }
+
 
   componentDidMount() {
     fetch("/projects")
@@ -106,6 +127,7 @@ class App extends React.Component {
       .catch(errors => {
         console.log("index errors:", errors)
       })
+    this.getProjectTechnologies()
     this.updateMembersBelongingToCurrentUser()
   }
 
@@ -130,6 +152,21 @@ class App extends React.Component {
     })
     .catch(errors => {
       console.log("create errors:", errors)
+    })
+  }
+
+  getProjectTechnologies = () => {
+    fetch("/project_technologies")
+    .then(response =>{
+      if(response.status === 200){
+        return response.json()
+      }
+    })
+    .then(projectTechArr =>{
+      this.setState({projectTechnologies: projectTechArr})
+    })
+    .catch(errors => {
+      console.log("Project Technologies errors:", errors);
     })
   }
 
