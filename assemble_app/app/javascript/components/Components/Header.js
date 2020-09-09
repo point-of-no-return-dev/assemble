@@ -39,9 +39,6 @@ class Header extends Component {
                         <NavItem>
                             <NavLink to="/index">View Projects</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink to="/project_new">Add a Project</NavLink>
-                        </NavItem>
                         {/* you see this if you're signed in */}
                         { this.props.logged_in &&
                         <>
@@ -50,7 +47,7 @@ class Header extends Component {
                                 <NavLink to="#">My Profile</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/projectnew">Create a Project</NavLink>
+                                <NavLink to="/project_new">Create a Project</NavLink>
                             </NavItem>
                             <NavItem>
                                 <a href={ this.props.sign_out_route }>Sign Out</a>

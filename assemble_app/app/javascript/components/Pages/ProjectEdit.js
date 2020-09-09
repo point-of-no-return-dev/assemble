@@ -6,7 +6,7 @@ import {
     Label,
     Button
   } from 'reactstrap';
-  import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class ProjectEdit extends Component {
     constructor(props){
@@ -16,7 +16,6 @@ class ProjectEdit extends Component {
                 name: this.props.project.name,
                 description: this.props.project.description
             },
-            currentProject: this.props.project.id,
             success: false
         }
     }
@@ -31,7 +30,7 @@ class ProjectEdit extends Component {
     handleSubmit = (e) => {
         // keeps react from refreshing the page unnecessarily
         e.preventDefault()
-        this.props.editProject(this.state.form, this.state.currentProject)
+        this.props.editProject(this.state.form, this.props.project.id)
         this.setState({ success: true })
     }
 

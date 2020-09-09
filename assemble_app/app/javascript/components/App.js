@@ -27,6 +27,7 @@ class App extends React.Component {
       membersBelongingToCurrentUser: []
     }
   }
+  
 
   isCurrentUserTheOwner = (project) => {
     console.log(this.state.membersBelongingToCurrentUser)
@@ -148,16 +149,40 @@ class App extends React.Component {
       // if the response is good  - reload the cats
       if(response.status === 200){
         this.componentDidMount()
-        console.log("create status:", response.status);
+        console.log("edit status:", response.status);
       }
       return response
     })
     .catch(errors => {
-      console.log("create errors:", errors)
+      console.log("edit errors:", errors)
     })
-
   }
 
+  deleteProject = (project, projectID) => {
+    fetch(`/projects/${projectID}`, {
+      // converting an object to a string
+      body: JSON.stringify(project),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "DELETE"
+    })
+    .then(response => {
+      console.log(response.status)
+      // if the response is good  - reload the cats
+      if(response.status === 200){
+        this.componentDidMount()
+        console.log("delete status:", response.status);
+      }
+      return response
+    })
+    .catch(errors => {
+      console.log("delete errors:", errors)
+    })
+  }
+  
   render () {
     const {
       logged_in,
@@ -213,8 +238,8 @@ class App extends React.Component {
                 <ProjectShow 
                   project = {project}
                   current_user={current_user}
-                  // membersBelongingToCurrentUser = {this.membersBelongingToCurrentUser}
                   isCurrentUserTheOwner = {this.isCurrentUserTheOwner}
+                  deleteProject = {this.deleteProject}
                 />
               )
             }}
