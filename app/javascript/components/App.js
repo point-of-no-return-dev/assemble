@@ -25,7 +25,42 @@ class App extends React.Component {
       projectsToBeShown: [],
       currentFiltersSelected: [],
       projectTechnologies: []
+      membersBelongingToCurrentUser: []
     }
+  }
+  
+
+  isCurrentUserTheOwner = (project) => {
+    console.log(this.state.membersBelongingToCurrentUser)
+    console.log("I'm Running")
+    let isTheOwner = false;
+    this.state.membersBelongingToCurrentUser.forEach(member => {
+      if (member.project_id === project.id && member.is_owner === true) {
+        isTheOwner = true;
+      } 
+      return isTheOwner;
+    })
+    return isTheOwner;
+  }
+
+  updateMembersBelongingToCurrentUser = () => {
+    //Get all of the members from the database
+    fetch("/members")
+    .then(response => {
+      if(response.status === 200) {
+        console.log("status:", response.status);
+        return response.json()
+      }
+    })
+      .then(membersArray => {
+        let membersICareAbout = membersArray.filter(member => {
+          return member.user_id == this.props.current_user.id
+        })
+        this.setState( {membersBelongingToCurrentUser: membersICareAbout} )
+      })
+      .catch(errors => {
+        console.log("member errors:", errors)
+      })
   }
 
   updateCurrentFiltersSelected = (filterOption) => {
@@ -92,8 +127,8 @@ class App extends React.Component {
       .catch(errors => {
         console.log("index errors:", errors)
       })
-
     this.getProjectTechnologies()
+    this.updateMembersBelongingToCurrentUser()
   }
 
   createNewProject = (project) => {
@@ -135,6 +170,56 @@ class App extends React.Component {
     })
   }
 
+  editProject = (project, projectID) => {
+    return fetch(`/projects/${projectID}`, {
+      // converting an object to a string
+      body: JSON.stringify(project),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "PATCH"
+    })
+    .then(response => {
+      console.log(response.status)
+      // if the response is good  - reload the cats
+      if(response.status === 200){
+        this.componentDidMount()
+        console.log("edit status:", response.status);
+      }
+      return response
+    })
+    .catch(errors => {
+      console.log("edit errors:", errors)
+    })
+  }
+
+  deleteProject = (project, projectID) => {
+    fetch(`/projects/${projectID}`, {
+      // converting an object to a string
+      body: JSON.stringify(project),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "DELETE"
+    })
+    .then(response => {
+      console.log(response.status)
+      // if the response is good  - reload the cats
+      if(response.status === 200){
+        this.componentDidMount()
+        console.log("delete status:", response.status);
+      }
+      return response
+    })
+    .catch(errors => {
+      console.log("delete errors:", errors)
+    })
+  }
+  
   render () {
     const {
       logged_in,
@@ -189,6 +274,9 @@ class App extends React.Component {
               return (
                 <ProjectShow 
                   project = {project}
+                  current_user={current_user}
+                  isCurrentUserTheOwner = {this.isCurrentUserTheOwner}
+                  deleteProject = {this.deleteProject}
                 />
               )
             }}
@@ -200,7 +288,10 @@ class App extends React.Component {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
               return (
-                <ProjectEdit project = {project}/>
+                <ProjectEdit 
+                  project = {project}
+                  editProject = {this.editProject}
+                />
               )
             }}
           />

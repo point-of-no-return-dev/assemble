@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :technologies
   resources :projects
+  get '/members' => 'member#index'
   devise_for :users
   get '/project_technologies' => 'project_technology#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
