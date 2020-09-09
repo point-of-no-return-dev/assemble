@@ -1,4 +1,5 @@
 class ProjectTechnology < ApplicationRecord
-    belongs_to :technology 
-    belongs_to :project
+    belongs_to :technology, required: false
+    belongs_to :project, required: false
 end
+
