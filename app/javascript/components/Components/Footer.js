@@ -11,9 +11,9 @@ class Footer extends Component{
   render(){
     return(
       <React.Fragment>
-        <Navbar className="footer" color="light" light expand="md">
+        <Navbar className="footer" id="footer" expand="md">
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            <NavItem id="footer-text">
               <NavLink to="/aboutus">About Us</NavLink>
               <p> © 2020 Assemble.</p>
             </NavItem>
