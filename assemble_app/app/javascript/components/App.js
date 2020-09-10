@@ -25,7 +25,7 @@ class App extends React.Component {
       projectsToBeShown: [],
       currentFiltersSelected: [],
       projectTechnologies: [],
-      membersBelongingToCurrentUser: [],
+      membersBelongingToCurrentUser: []
     }
   }
   
