@@ -328,8 +328,6 @@ class App extends React.Component {
                 //Make a createNewProject method to pass as a prop
                 createNewProject={this.createNewProject}
                 current_user={current_user}
-                updateCurrentTechnologiesSelectedForProjectCreatePage={this.updateCurrentTechnologiesSelectedForProjectCreatePage}
-                currentTechnologiesSelectedForProjectCreatePage={this.state.currentTechnologiesSelectedForProjectCreatePage}
               />
             }
           />
