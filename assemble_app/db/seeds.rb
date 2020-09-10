@@ -35,17 +35,14 @@ end
 #For projects table
 projects = [
     {
-        id: 1,
         name: "Assemble",
         description: "We ask that you know the difference between capital and lower case letters and when to use them."
     },
     {
-        id: 2,
         name: "Pet Wellness App",
         description: "It's like a personal assistant for all of your pet needs."
     },
     {
-        id: 3,
         name: "Fitness",
         description: "Working out is so much fun with this app. We need 2 developers to work on it."
     }
@@ -78,17 +75,14 @@ Member.create user_id: test_user2.id, project_id: test_project3.id, is_owner: tr
 # Created technologies
 technologies = [
    {
-	id: 1,
     category: "Frontend",
     name:  "HTML"
    },
    {
-	id: 2,
     category: "Frontend",
     name:  "CSS"
    },
    {
-	id: 3,
     category: "Frontend",
     name:  "JavaScript"
     }

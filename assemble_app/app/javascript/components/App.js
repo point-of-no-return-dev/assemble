@@ -65,7 +65,7 @@ class App extends React.Component {
 
   updateCurrentFiltersSelected = (filterOption) => {
     //Check to see if the filterOption is in the curentFiltersSelected
-    //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
+    //If it is, create a new array that is a copy of the old state, minus the filteredOption
     if (this.state.currentFiltersSelected.includes(parseInt(filterOption))) {
       //Declare an array of filters that we can alter
       let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
@@ -78,7 +78,7 @@ class App extends React.Component {
       console.log("after splice", newCurrentFiltersSelectedArray);
       //setState to the updated array
       this.setState( {currentFiltersSelected: newCurrentFiltersSelectedArray})
-    //If it is, create a new array that is a copy of the old state, minus the filteredOption
+    //If filterOption is not in state already, create a new array that adds the filterOption, and upstate
     } else {
         //Declare an array of filters that we can alter
         let newCurrentFiltersSelectedArray = this.state.currentFiltersSelected;
@@ -131,10 +131,11 @@ class App extends React.Component {
     this.updateMembersBelongingToCurrentUser()
   }
 
-  createNewProject = (project) => {
+  // ********** CRUD METHODS FOR PROJECT TABLE ********** //
+  createNewProject = (project, projectTechnologies) => {
     return fetch("/projects", {
       // converting an object to a string
-      body: JSON.stringify(project),
+      body: JSON.stringify({project, projectTechnologies}),
       // specify the info being sent in JSON and the info returning should be JSON
       headers: {
         "Content-Type": "application/json"
@@ -146,30 +147,16 @@ class App extends React.Component {
       // if the response is good  - reload the cats
       if(response.status === 200){
         this.componentDidMount()
-        console.log("create status:", response.status);
+        console.log("create_project status:", response.status);
       }
       return response
     })
     .catch(errors => {
-      console.log("create errors:", errors)
+      console.log("create_project errors:", errors)
     })
   }
 
-  getProjectTechnologies = () => {
-    fetch("/project_technologies")
-    .then(response =>{
-      if(response.status === 200){
-        return response.json()
-      }
-    })
-    .then(projectTechArr =>{
-      this.setState({projectTechnologies: projectTechArr})
-    })
-    .catch(errors => {
-      console.log("Project Technologies errors:", errors);
-    })
-  }
-
+  
   editProject = (project, projectID) => {
     return fetch(`/projects/${projectID}`, {
       // converting an object to a string
@@ -194,7 +181,7 @@ class App extends React.Component {
       console.log("edit errors:", errors)
     })
   }
-
+  
   deleteProject = (project, projectID) => {
     fetch(`/projects/${projectID}`, {
       // converting an object to a string
@@ -219,7 +206,46 @@ class App extends React.Component {
       console.log("delete errors:", errors)
     })
   }
-  
+  // ********** CRUD METHODS FOR MEMBER TABLE ********** //
+  createNewMember = (member) => {
+    return fetch("/members", {
+      // converting an object to a string
+      body: JSON.stringify(member),
+      // specify the info being sent in JSON and the info returning should be JSON
+      headers: {
+        "Content-Type": "application/json"
+      },
+      // HTTP verb so the correct endpoint is invoked on the server
+      method: "POST"
+    })
+    .then(response => {
+      // if the response is good  - reload the cats
+      if(response.status === 200){
+        this.componentDidMount()
+        console.log("create_member status:", response.status);
+      }
+      return response
+    })
+    .catch(errors => {
+      console.log("create_member errors:", errors)
+    })
+  }
+
+  // ********** CRUD METHODS FOR PROJECT-TECHNOLOGY TABLE ********** //
+  getProjectTechnologies = () => {
+    fetch("/project_technologies")
+    .then(response =>{
+      if(response.status === 200){
+        return response.json()
+      }
+    })
+    .then(projectTechArr =>{
+      this.setState({projectTechnologies: projectTechArr})
+    })
+    .catch(errors => {
+      console.log("Project Technologies errors:", errors);
+    })
+  }
   render () {
     const {
       logged_in,
