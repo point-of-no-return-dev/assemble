@@ -119,8 +119,8 @@ class ProjectNew extends React.Component{
                     </FormGroup>
                 </div>
 
-                <div className="body-container">
-                    <div className="form">
+                {/* <div className="body-container">
+                    <div className="form"> */}
                         <br/><br/>
                         <h1 id="h1-dark-blue">Create a Project</h1>
                         <div id="form-container">
@@ -151,7 +151,7 @@ class ProjectNew extends React.Component{
                                         <textarea 
                                             type="text"
                                             name="description"
-                                            onChange={ this.handleChange }
+                                            onChange={ this.handleChangeForForm }
                                             value={ this.state.form.description }
                                             id="form-fields"
                                             cols="40" 
@@ -169,8 +169,8 @@ class ProjectNew extends React.Component{
                                 </Form>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    {/* </div>
+                </div> */}
 
                 { this.state.success && <Redirect to="/index" />}
             </React.Fragment>
