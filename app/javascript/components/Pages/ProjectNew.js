@@ -119,8 +119,8 @@ class ProjectNew extends React.Component{
                     </FormGroup>
                 </div>
 
-                <div className="body-container">
-                    <div className="form">
+                {/* <div className="body-container">
+                    <div className="form"> */}
                         <br/><br/>
                         <h1 id="h1-dark-blue">Create a Project</h1>
                         <div id="form-container">
@@ -169,9 +169,9 @@ class ProjectNew extends React.Component{
                                 </Form>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
+                    {/* </div>
+                </div> */}
+
                 { this.state.success && <Redirect to="/index" />}
             </React.Fragment>
         )
