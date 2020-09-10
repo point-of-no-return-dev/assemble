@@ -6,9 +6,13 @@ import {
     Navbar,
     NavbarBrand,
     NavItem,
-    NavbarToggler
+    NavbarToggler,
+    Row,
+    Link,
+    Image
 } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+
 
 class Header extends Component {
     constructor(props){
@@ -24,33 +28,47 @@ class Header extends Component {
         this.setState({ collapsed: true })
     }
     render(){
-    return (
-        <React.Fragment>
+        return (
+            <React.Fragment>
             {/* sets the navbar's color/theme */}
-            <Navbar color="faded" light>
+            <Navbar>
+            <img
+                id="navbar-logo"
+                src="https://i.ibb.co/wST166t/assemble-logo.png"
+                width="35"
+                height="35"
+                alt="Assemble logo">
+                    
+             </img>
+
                 {/* navbar logo */}
-                <NavbarBrand href="/" className="mr-auto">Assemble</NavbarBrand>
+                <NavbarBrand 
+                    href="/" 
+                    className="mr-auto" 
+                    id="navbar-text"
+                >Assemble
+                </NavbarBrand>
                 {/* button that allows us to toggle navbar open/closed */}
-                <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" />
+                <NavbarToggler id="navbar-hamburger" onClick={ this.toggleNavbar }/>
                 <Collapse isOpen={ !this.state.collapsed } navbar>
                     {/* Actual Navbar */}
                     <Nav navbar>
                         {/* link to index */}
                         <NavItem>
-                            <NavLink to="/index">View Projects</NavLink>
+                            <NavLink to="/index" id="navbar-text-links">View Projects</NavLink>
                         </NavItem>
                         {/* you see this if you're signed in */}
                         { this.props.logged_in &&
                         <>
                             <NavItem>
                                 {/* Need this NavLink to lead to the current_user's profile. */}
-                                <NavLink to="#">My Profile</NavLink>
+                                <NavLink to="#" id="navbar-text-links">My Profile</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink to="/project_new">Create a Project</NavLink>
+                                <NavLink to="/project_new" id="navbar-text-links">Create a Project</NavLink>
                             </NavItem>
                             <NavItem>
-                                <a href={ this.props.sign_out_route }>Sign Out</a>
+                                <a href={ this.props.sign_out_route } id="navbar-text-links">Sign Out</a>
                             </NavItem>
                         </>
                         }
@@ -58,10 +76,10 @@ class Header extends Component {
                         { !this.props.logged_in &&
                         <>
                             <NavItem>
-                                <a href={this.props.sign_in_route}>Sign In</a>
+                                <a href={this.props.sign_in_route} id="navbar-text-links">Sign In</a>
                             </NavItem>
                             <NavItem>
-                                <a href="/users/sign_up">Sign Up</a>
+                                <a href="/users/sign_up" id="navbar-text-links">Sign Up</a>
                             </NavItem>
                         </>
                         }
