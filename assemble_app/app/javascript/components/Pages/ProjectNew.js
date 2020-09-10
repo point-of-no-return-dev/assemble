@@ -76,7 +76,6 @@ class ProjectNew extends React.Component{
         this.setState({ success: true })
     }
 
-
     render() {
         return(
             <React.Fragment>
@@ -122,29 +121,48 @@ class ProjectNew extends React.Component{
 
                 <div className="body-container">
                     <div className="form">
+                <br/><br/>
+                <h1 id="h1-dark-blue">Create a Project</h1>
+                <div id="form-container">
+                    <div>
                         <Form>
                             <FormGroup>
-                                <Label>Project Name</Label>
+                                <Label id="body-text">Project Name</Label>
                                 <Input
                                     type="text"
                                     name="name"
                                     onChange={ this.handleChangeForForm }
                                     value={ this.state.form.name }
+                                    id="form-fields"
                                 />
                             </FormGroup>
                             <FormGroup>
-                                <Label>Project Description</Label>
-                                <Input
+                                <Label id="body-text">Project Description</Label>
+                            {/* Previous Input field */}
+                                {/* <Input
                                     type="text"
                                     name="description"
                                     onChange={ this.handleChangeForForm }
                                     value={ this.state.form.description }
-                                />
+                                    id="form-fields"
+                                /> */}
+                                <br/>
+                            {/* Code below allows for user field to have multiple lines */}
+                                <textarea 
+                                    type="text"
+                                    name="description"
+                                    onChange={ this.handleChange }
+                                    value={ this.state.form.description }
+                                    id="form-fields"
+                                    cols="40" 
+                                    rows="6">
+                                </textarea>
                             </FormGroup>
                             <Button
                                 name="submit"
                                 color="secondary"
                                 onClick={ this.handleSubmit }
+                                id="primary-btn"
                             >
                                 Create a Project
                             </Button>

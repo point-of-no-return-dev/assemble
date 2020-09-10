@@ -14,7 +14,6 @@ class Index extends Component {
                     updateCurrentFiltersSelected = { this.props.updateCurrentFiltersSelected }
                     handleChange = { this.props.handleChange }
                 />
-                <h2>CREATE. FIND. ASSEMBLE.</h2>
                 <h5>View projects below.</h5>
                 <h3>All the Projects</h3>
                 <Row id="cards">
