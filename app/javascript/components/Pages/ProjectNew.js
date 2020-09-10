@@ -37,7 +37,6 @@ class ProjectNew extends React.Component{
         this.setState({ success: true })
     }
 
-
     render() {
         return(
             <React.Fragment>
@@ -58,14 +57,16 @@ class ProjectNew extends React.Component{
                             </FormGroup>
                             <FormGroup>
                                 <Label id="body-text">Project Description</Label>
+                            {/* Previous Input field */}
                                 {/* <Input
                                     type="text"
                                     name="description"
                                     onChange={ this.handleChange }
                                     value={ this.state.form.description }
-                                    id="form-field-description"
+                                    id="form-fields"
                                 /> */}
                                 <br/>
+                            {/* Code below allows for user field to have multiple lines */}
                                 <textarea 
                                     type="text"
                                     name="description"
