@@ -10,20 +10,16 @@
 #For users table
 user = [
     {
-        id: 1,
         email: "test@test.com",
         password: "123456",
         password_confirmation: "123456",
-        first_name: "Joe",
-        last_name: "Shmo"
+        username: "JoeShmo"
     },
     {
-        id: 2,
         email: "test2@test2.com",
         password: "123456",
         password_confirmation: "123456",
-        first_name: "Sam",
-        last_name: "Williams"
+        username: "SamWilliams"
     }
 ]
 
