@@ -7,14 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.filter-container{
-    display: flex;
-    justify-content: center;
-}
+// .filter-container{
+//     display: flex;
+//     justify-content: center;
+// }
 
-.filter-label{
-    padding: 30px;
-}
+// .filter-label{
+//     padding: 30px;
+// }
 
 
 
@@ -30,6 +30,58 @@
 #center{
     display: flex;
     justify-content: center;
+}
+
+// Filter text styling
+#filter-body-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+// Filter Card styling
+#filter-card{
+    border: 0px;
+    // background-color: #0A2B3E;
+}
+
+#filter-index-card{
+    border: 0px;
+    background-color: #ebebeb;
+    border-radius: 1rem;
+    margin: 3%;
+    padding: 7%;
+
+}
+
+#filter-cards{
+    margin: 3% 10% 0 10%;
+    // background-color: #0A2B3E;
+}
+
+// Filter CardDeck styling
+#filter-deck{
+    padding: 0 4% 0 4%;
+}
+
+// Filter div container styling
+#filter-container{
+    // height: 320px;
+    width: 42%;
+    margin: auto;
+}
+
+#filter-container-index{
+    // height: 320px;
+    width: 60%;
+    margin: auto;
+}
+
+#filter-btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%
 }
 
 // ProjectNew, style form
@@ -111,6 +163,22 @@
     color: #00DECE;
     font-weight: 700;
     padding-top: 15%;
+}
+
+// LandingPage section headlines
+#h3-filter-orange{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #F7892A;
+    font-weight: 700;
+    padding-top: 15%;
+}
+
+#body-text-filter{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
 }
 
 // LandingPage hero body section
