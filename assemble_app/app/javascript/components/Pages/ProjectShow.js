@@ -27,24 +27,29 @@ class ProjectShow extends Component {
         let { project } = this.props
         return(    
             <React.Fragment>
-                <h2>{ project.name }</h2>
-                <h5>Project Description:</h5>
-                <p>{ project.description }</p>
-
+                <br/><br/>
+                <h1 id="h1-dark-blue">{ project.name }</h1>
+                <p id="filter-body-text" style={{textAlign:"center"}}>Project Description:</p>
+                <p id="filter-body-text" style={{textAlign:"center"}}>{ project.description }</p>
+                <br/><br/>
                 {/* If the current user is the project owner, then the eti and delete buttons will be shown. */}
                 { this.state.isOwnerViewing &&
                 <>
-                    <NavLink to={`/project_edit/${project.id}`}>
-                        <Button color='secondary'>
-                            Edit
+                    <div id="center">
+                        <NavLink to={`/project_edit/${project.id}`}>
+                            <Button 
+                                id="primary-btn"
+                            >Edit
+                            </Button>
+                        </NavLink>
+                        <Button 
+                            className='delete-button'
+                            id="secondary-btn"
+                            onClick = {this.onClick}
+                        >
+                            Delete
                         </Button>
-                    </NavLink>
-                    <Button 
-                        className='delete-button' 
-                        onClick = {this.onClick}
-                    >
-                        Delete
-                    </Button>
+                    </div>
                 </>
                 }
 

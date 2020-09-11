@@ -24,7 +24,7 @@ class Index extends Component {
                                 <Card id="filter-index-card" body>
                                 <CardTitle>
                                     <h3 id="h3-filter-blue">{ project.name }</h3>
-                                    <p id="body-text">{ project.description }</p>
+                                    <p id="body-text-index">{ project.description }</p>
                                     <p>
                                     <NavLink to={`/project_show/${project.id}`}>
                                         <Button 
@@ -47,14 +47,15 @@ class Index extends Component {
                         {this.props.projectsToBeShown.map((project, index) => {
                             return (
                             <Col sm="4" key={ index }>
-                                <Card body>
+                                <Card id="filter-index-card" body>
                                 <CardTitle>
-                                    <h5>{ project.name }</h5>
-                                    <h5>{ project.description }</h5>
+                                    <h3 id="h3-filter-blue">{ project.name }</h3>
+                                    <p id="body-text-index">{ project.description }</p>
                                     <p>
                                     <NavLink to={`/project_show/${project.id}`}>
-                                        <Button color="secondary">
-                                        Show Page
+                                        <Button 
+                                            id="primary-btn"
+                                        >Show Page
                                         </Button>
                                     </NavLink>
                                     </p>
