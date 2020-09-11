@@ -51,4 +51,8 @@ gem "bootstrap", "~> 4.5"
 
 gem "devise", "~> 4.7"
 
+
 gem "rspec-rails"
+
+gem 'simple_form'
+
