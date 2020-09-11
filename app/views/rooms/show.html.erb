@@ -3,22 +3,42 @@
   <%= @room.name %>
 </h3>
 
-
+<div class="container">
 <div class="row">
   <div class="col-12 col-md-3">
     <%= render partial: 'rooms' %>
   </div>
 
-  <div class="col">
-    <div class="chat">
+ <div class="col">
+    <div class="chat" style="border: 1px solid gray; border-radius: 5px 5px 0 0; background-color: gray; height: 50vh; overflow-y: auto;">
       <% @messages.each do |message| %>
-        <%= message %>
+        <div class="chat-message-container">
+          <div class="row no-gutters">
+            <div class="col-auto text-center">
+              <%= message.user.username %>:
+            </div>
+
+            <div class="col">
+              <div class="message-content">
+                <p class="mb-1">
+                  <%= message.content %>
+                </p>
+
+                <div class="text-right">
+                  <small>
+                    <%= message.created_at %>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-    </div>
+</div>
 
     <%= simple_form_for @message, remote: true do |form| %>
       <div class="input-group mb-3">
-        <%= form.input @message, as: :string,
+        <%= form.input :content, as: :string,
             wrapper: false,
             label: false,
             input_html: {
@@ -33,4 +53,5 @@
       <%= form.input :room_id, as: :hidden %>
     <% end %>
   </div>
+</div>
 </div>

@@ -62,7 +62,7 @@ class Header extends Component {
                         <>
                             <NavItem>
                                 {/* Need this NavLink to lead to the current_user's profile. */}
-                                <a href="/chat_rooms" id="navbar-text-links">Messenger</a>
+                                <a href="/rooms" id="navbar-text-links">Messenger</a>
                             </NavItem>
                             <NavItem>
                                 <NavLink to="/project_new" id="navbar-text-links">Create a Project</NavLink>
