@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "chai": "^4.2.0",
     "jest": "^26.4.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
