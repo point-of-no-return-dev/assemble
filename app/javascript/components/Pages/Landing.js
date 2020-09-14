@@ -21,7 +21,7 @@ class Landing extends Component {
                 <div>
                     <Jumbotron id="hero-image">
                         <h1 id="h1-white">CREATE. FIND. ASSEMBLE.</h1>
-                        <p className="lead" id="hero-body">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information. This is a simple hero unit, a simple Jumbotron-style com.</p>
+                        <p className="lead" id="hero-body">Assemble is a team building app where people can create projects, collaborate, show off technical skills and expand their network. Find your team and be on your way to start your own project.</p>
                         <p>
                             <br/>
                             {/* Button will take you to the index of projects */}
@@ -42,7 +42,7 @@ class Landing extends Component {
                                 <Card id="no-border">
                                     <CardBody>
                                         <h3 id="h3-dark-blue">CREATE.</h3>
-                                        <CardText id="section-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</CardText>
+                                        <CardText id="section-text">With Assemble, you have the ability to post new project based on specific technologies and skillsets, allowing you to find the right community for you web development needs.</CardText>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -69,7 +69,7 @@ class Landing extends Component {
                                 <Card id="no-border">
                                     <CardBody>
                                         <h3 id="h3-orange">FIND.</h3>
-                                        <CardText id="section-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</CardText>
+                                        <CardText id="section-text">You can also have the ability to search for projects you might be interested in. Find your own team, collaborate, and show off your technical skills to expand their network.</CardText>
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -87,7 +87,7 @@ class Landing extends Component {
                                 <Card id="no-border">
                                     <CardBody>
                                         <h3 id="h3-teal">ASSEMBLE.</h3>
-                                        <CardText id="section-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</CardText>
+                                        <CardText id="section-text">We invision our app to be primarily used by students, new developers looking for more experience, and/or freelancers looking for a team. So, got a project idea and looking for a team? Create. Find. Assemble.</CardText>
                                     </CardBody>
                                 </Card>
                             </Col>
