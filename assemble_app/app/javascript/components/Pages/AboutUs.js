@@ -28,7 +28,7 @@ class AboutUs extends Component{
                         <CardImg top width="50%" src="https://i.ibb.co/bFGmb4r/trip.png" alt="Card image cap" />
                         <CardBody>
                             <CardTitle id="h3-filter-blue">Trip Moore</CardTitle>
-                            <CardText id="filter-body-text">Loves to code!</CardText>
+                            <CardText id="filter-body-text">Low-key health enthusiast, athlete, love the outdoors.</CardText>
                         </CardBody>
                     </Card>
                     <Card style={{border:"none"}}>
