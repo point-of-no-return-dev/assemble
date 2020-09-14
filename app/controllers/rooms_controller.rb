@@ -1,5 +1,10 @@
 class RoomsController < ApplicationController
-    # Loads:  # @rooms = all rooms  # @room = current room when applicable  before_action :load_entities
+    # Loads:  
+    # @rooms = all rooms  
+    # @room = current room when applicable  
+    
+    before_action :load_entities
+    
     def index    
         @rooms = Room.all  
     end
