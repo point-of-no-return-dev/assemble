@@ -23,14 +23,17 @@ class ProjectShow extends Component {
 
     render() {
         console.log(this.props.isCurrentUserTheOwner(this.props.project))
+        // console.log(this.props.getProjectTechnologies());
         // deconstructs projects so I don't have to type out the entire dot syntax for it every time.
         let { project } = this.props
         return(    
             <React.Fragment>
                 <br/><br/>
+                {/* <p id="filter-body-text" style={{textAlign:"left", fontWeight: "700", color:"#0f9fed"}}>Project Name:</p> */}
                 <h1 id="h1-dark-blue">{ project.name }</h1>
-                <p id="filter-body-text" style={{textAlign:"center"}}>Project Description:</p>
-                <p id="filter-body-text" style={{textAlign:"center"}}>{ project.description }</p>
+                <br/>
+                <p id="filter-body-text" style={{textAlign:"center", fontWeight: "700", color:"#0f9fed"}}>Project Description:</p>
+                <p id="filter-body-text" style={{textAlign:"center", width:"40%", margin:"auto"}}>{ project.description }</p>
                 <br/><br/>
                 {/* If the current user is the project owner, then the eti and delete buttons will be shown. */}
                 { this.state.isOwnerViewing &&
@@ -39,11 +42,13 @@ class ProjectShow extends Component {
                         <NavLink to={`/project_edit/${project.id}`}>
                             <Button 
                                 id="primary-btn"
+                                style={{margin:"5px"}}
                             >Edit
                             </Button>
                         </NavLink>
                         <Button 
                             className='delete-button'
+                            style={{margin:"5px"}}
                             id="secondary-btn"
                             onClick = {this.onClick}
                         >

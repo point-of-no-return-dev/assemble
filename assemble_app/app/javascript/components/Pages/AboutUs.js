@@ -4,8 +4,8 @@ class AboutUs extends Component{
     render(){
         return(
             <React.Fragment>
-                <h3>About Us</h3>
-
+             <br/><br/>
+                <h1 id="h1-dark-blue">About Us</h1>
                 <h4>Trip</h4>
                 <h4>Cynthia</h4>
                 <h4>Miguel</h4>

@@ -74,7 +74,7 @@ Member.create user_id: test_user2.id, project_id: test_project3.id, is_owner: tr
 
 # Created technologies
 technologies = [
-   {
+    {
     # id: 1
     category: "Frontend",
     name:  "HTML"
