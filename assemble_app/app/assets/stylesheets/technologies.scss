@@ -7,16 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.filter-container{
-    display: flex;
-    justify-content: center;
-}
-
-.filter-label{
-    padding: 30px;
-}
-
-
 
 // Generic id for body text, used in ProjectNew
 #body-text{
@@ -26,10 +16,71 @@
     font-weight: 400;
 }
 
+// Generic id for body text, used in ProjectNew
+#body-text-index{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .95rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+
 // Generic id to center content
 #center{
     display: flex;
     justify-content: center;
+}
+
+// Filter text styling
+#filter-body-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+// Filter Card styling
+#filter-card{
+    border: 0px;
+    // background-color: #0A2B3E;
+}
+
+#filter-index-card{
+    border: 0px;
+    background-color: #ebebeb;
+    border-radius: 1rem;
+    margin-bottom: 7%;
+    padding: 7%;
+
+}
+
+#filter-cards{
+    margin: 3% 10% 0 10%;
+    // background-color: #0A2B3E;
+}
+
+// Filter CardDeck styling
+#filter-deck{
+    padding: 0 4% 0 4%;
+}
+
+// Filter div container styling
+#filter-container{
+    // height: 320px;
+    width: 42%;
+    margin: auto;
+}
+
+#filter-container-index{
+    // height: 320px;
+    width: 60%;
+    margin: auto;
+}
+
+#filter-btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%
 }
 
 // ProjectNew, style form
@@ -113,11 +164,39 @@
     padding-top: 15%;
 }
 
+// LandingPage section headlines
+#h3-filter-blue{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #1f2b6c;
+    font-weight: 700;
+    padding-top: 15%;
+}
+
+#body-text-filter{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
+}
+
 // LandingPage hero body section
 #hero-body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.05rem;
     color: #FFFFFF;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+// LandingPage hero body section
+#about-us-body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    color: #000000;
     font-weight: 400;
     text-align: center;
     margin: 0;
@@ -182,12 +261,29 @@
     border-radius: 20px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border: 0px;
+    border: 2px solid #F7892A;
 }
 
 // Generic id for Primary Button hover state
 #primary-btn:hover {
 	background-color:#bf6b22;
+}
+
+#secondary-btn{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2b6c;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 2px solid #1f2b6c;
+}
+
+// Generic id for Primary Button hover state
+#secondary-btn:hover {
+	background-color:#0F9FED;
 }
 
 // Landing Page section images

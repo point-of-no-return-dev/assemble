@@ -23,28 +23,38 @@ class ProjectShow extends Component {
 
     render() {
         console.log(this.props.isCurrentUserTheOwner(this.props.project))
+        // console.log(this.props.getProjectTechnologies());
         // deconstructs projects so I don't have to type out the entire dot syntax for it every time.
         let { project } = this.props
         return(    
             <React.Fragment>
-                <h2>{ project.name }</h2>
-                <h5>Project Description:</h5>
-                <p>{ project.description }</p>
-
+                <br/><br/>
+                {/* <p id="filter-body-text" style={{textAlign:"left", fontWeight: "700", color:"#0f9fed"}}>Project Name:</p> */}
+                <h1 id="h1-dark-blue">{ project.name }</h1>
+                <br/>
+                <p id="filter-body-text" style={{textAlign:"center", fontWeight: "700", color:"#0f9fed"}}>Project Description:</p>
+                <p id="filter-body-text" style={{textAlign:"center", width:"40%", margin:"auto"}}>{ project.description }</p>
+                <br/><br/>
                 {/* If the current user is the project owner, then the eti and delete buttons will be shown. */}
                 { this.state.isOwnerViewing &&
                 <>
-                    <NavLink to={`/project_edit/${project.id}`}>
-                        <Button color='secondary'>
-                            Edit
+                    <div id="center">
+                        <NavLink to={`/project_edit/${project.id}`}>
+                            <Button 
+                                id="primary-btn"
+                                style={{margin:"5px"}}
+                            >Edit
+                            </Button>
+                        </NavLink>
+                        <Button 
+                            className='delete-button'
+                            style={{margin:"5px"}}
+                            id="secondary-btn"
+                            onClick = {this.onClick}
+                        >
+                            Delete
                         </Button>
-                    </NavLink>
-                    <Button 
-                        className='delete-button' 
-                        onClick = {this.onClick}
-                    >
-                        Delete
-                    </Button>
+                    </div>
                 </>
                 }
 
