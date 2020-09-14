@@ -28,21 +28,21 @@ class AboutUs extends Component{
                         <CardImg top width="50%" src="https://i.ibb.co/bFGmb4r/trip.png" alt="Card image cap" />
                         <CardBody>
                             <CardTitle id="h3-filter-blue">Trip Moore</CardTitle>
-                            <CardText id="filter-body-text">This card has supporting text below as a natural lead-in to additional content.</CardText>
+                            <CardText id="filter-body-text">Loves to code!</CardText>
                         </CardBody>
                     </Card>
                     <Card style={{border:"none"}}>
                         <CardImg top width="50%" src="https://i.ibb.co/gJ7bVhd/miguel.png" alt="Card image cap" />
                         <CardBody>
                             <CardTitle id="h3-filter-blue">Miguel Palo</CardTitle>
-                            <CardText id="filter-body-text">This card has supporting text below as a natural lead-in to additional content.</CardText>
+                            <CardText id="filter-body-text">Likes to capture light, enjoys the hands on process of many different things: building PC’s, developing and scanning film, printing clothes, and making web apps.</CardText>
                         </CardBody>
                     </Card>
                     <Card style={{border:"none"}}>
                         <CardImg top width="50%" src="https://i.ibb.co/vkPfdpz/cynthia.png" alt="Card image cap" />
                         <CardBody>
                             <CardTitle id="h3-filter-blue">Cynthia Navarro</CardTitle>
-                              <CardText id="filter-body-text">Graphic designer, boba enthusiast, bike rider, and front-end tinkerer.</CardText>
+                              <CardText id="filter-body-text">Graphic designer, boba enthusiast, bike rider; combining creativity and logic through front-end web development.</CardText>
                         </CardBody>
                     </Card>
                 </CardDeck>
