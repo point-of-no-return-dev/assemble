@@ -70,17 +70,145 @@ Member.create user_id: test_user2.id, project_id: test_project3.id, is_owner: tr
 
 # Created technologies
 technologies = [
-   {
+    {
+    # id: 1
     category: "Frontend",
     name:  "HTML"
-   },
-   {
+    },
+    {
+    # id: 2
     category: "Frontend",
     name:  "CSS"
-   },
-   {
+    },
+    {
+    # id: 3
     category: "Frontend",
     name:  "JavaScript"
+    },
+    {
+    # id: 4
+    category: "Frontend",
+    name:  "jQuery"
+    },
+    {
+    # id: 5
+    category: "Frontend",
+    name:  "AngularJS"
+    },
+    {
+    # id: 6
+    category: "Frontend",
+    name:  "React"
+    },
+    {
+    # id: 7
+    category: "Back-end",
+    name:  "Ruby on Rails"
+    },
+    {
+     # id: 8
+    category: "Back-end",
+    name:  "Python"
+    },
+    {
+    # id: 9
+    category: "Back-end",
+    name:  "Java"
+    },
+    {
+    # id: 10
+    category: "Back-end",
+    name:  "PHP"
+    },
+    {
+    # id: 11
+    category: "Back-end",
+    name:  "C#"
+    },
+    {
+    # id: 12
+    category: "Frontend",
+    name:  "Perl"
+    },
+    {
+    # id: 13
+    category: "Testing",
+    name:  "RSpec"
+    },
+    {
+    # id: 14
+        category: "Testing",
+    name:  "Jest"
+    },
+    {
+    # id: 15
+    category: "Testing",
+    name:  "Enzyme"
+    },
+    {
+    # id: 16
+    category: "Design",
+    name:  "Adobe Illustrator"
+    },
+    {
+    # id: 17
+    category: "Design",
+    name:  "Adobe Photoshop"
+    },
+    {
+    # id: 18
+    category: "Design",
+    name:  "Sketch"
+    },
+    {
+    # id: 19
+    category: "Design",
+    name:  "Invision"
+    },
+    {
+    # id: 20
+    category: "Design",
+    name:  "Figma"
+    },
+    {
+     # id: 21
+    category: "Database",
+    name:  "Postman"
+    },
+    {
+    # id: 22
+    category: "Database",
+    name:  "PostgreSQL"
+    },
+    {
+     # id: 23
+    category: "Database",
+    name:  "SQL"
+    },
+    {
+    # id: 24
+    category: "Database",
+    name:  "Active Record"
+    },
+    {
+    # id: 25
+    category: "Conditions",
+    name:  "Remote"
+    },
+    {
+     # id: 26
+    category: "Conditions",
+    name:  "Pair programming"
+    },
+    {
+    # id: 27
+    category: "Conditions",
+    name:  "Independent"
+    },
+    {
+    # id: 28
+    category: "Conditions",
+    name:  "Required meetings"
     }
 ]
 

@@ -37,34 +37,44 @@ class ProjectEdit extends Component {
     render() {
         return(
             <React.Fragment>
-                <div className="body-container">
+            <br/><br/>
+             <h1 id="h1-dark-blue">Edit a Project</h1>
+             <div id="form-container">
                     <div className="form">
                         <Form>
                             <FormGroup>
-                                <Label>Project Name</Label>
+                            <Label style={{fontWeight:"500"}} id="body-text">Project Name</Label>
                                 <Input
                                     type="text"
                                     name="name"
                                     onChange={ this.handleChange }
                                     value={ this.state.form.name }
+                                    id="form-fields"
                                 />
                             </FormGroup>
                             <FormGroup>
-                                <Label>Project Description</Label>
-                                <Input
+                            <Label style={{fontWeight:"500"}} id="body-text">Project Description</Label>
+                            <br/>
+                                <textarea 
                                     type="text"
                                     name="description"
                                     onChange={ this.handleChange }
                                     value={ this.state.form.description }
-                                />
+                                    id="form-fields"
+                                    cols="67" 
+                                    rows="6">
+                                </textarea>
                             </FormGroup>
-                            <Button
-                                name="submit"
-                                color="secondary"
-                                onClick={ this.handleSubmit }
-                            >
-                                Submit Edit
-                            </Button>
+                            <div id="filter-btn">
+                                <Button
+                                    name="submit"
+                                    color="secondary"
+                                    onClick={ this.handleSubmit }
+                                    id="primary-btn"
+                                >
+                                    Submit Edit
+                                </Button>
+                            </div>
                         </Form>
                     </div>
                 </div>
