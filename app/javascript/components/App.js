@@ -30,17 +30,26 @@ class App extends React.Component {
     }
   }
 
-  projectIDCompare = (project) => {
-    let id = project.id
-    let projectTechArr = this.state.projectTechnologies
-    console.log("this is the project id:", id);
-    console.log("this is the project technologies", projectTechArr);
-    return projectTechArr.forEach(arr => {
-      if (arr.project_id  === id){
-        return arr.technology_id
-      }
-    })
-  }
+//   projectIDCompare = () => {
+//     let techArr = tech.map(value => value.id)
+//     let newArr = projTechArr.map(value => {
+//         if(value.project_id === id){
+//             return value.technology_id
+//         }
+//     })
+//     // Gets rid of undefined values
+//     let newTechArr = newArr.filter(value => {
+//         return typeof value === "number"
+//     })
+//     let techIDs = techArr.filter(value => {
+//         return newTechArr.includes(value)
+//     })
+//     return tech.map(value => {
+//         if(techIDs.includes(value.id)){
+//             return `${value.category}: ${value.name}`
+//         }
+//     })
+// }
 
   isCurrentUserTheOwner = (project) => {
     console.log(this.state.membersBelongingToCurrentUser)
