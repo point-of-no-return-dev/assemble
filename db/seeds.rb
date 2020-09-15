@@ -212,6 +212,10 @@ technologies = [
     }
 ]
 
+technologies.each do |attribute|
+    Technology.create attribute
+end
+
 # Relationship for project_technologies, with projects and technologies
 # Project 1 has HTML as a technology
 ProjectTechnology.create project_id: 1, technology_id: 1

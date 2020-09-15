@@ -1,0 +1,522 @@
+Started GET "/" for ::1 at 2020-09-14 12:38:14 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 622)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___3006971786227093271_28140 at /Users/learnacademy/Desktop/assemble/assemble_app/app/views/layouts/application.html.erb:8)
+Started GET "/" for ::1 at 2020-09-14 12:38:18 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 254)
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/assemble/assemble_app/public/packs
+[Webpacker] Hash: 1db547e248e0a73df42e
+Version: webpack 4.44.1
+Time: 41893ms
+Built at: 09/14/2020 12:39:06 PM
+                                          Asset       Size            Chunks                         Chunk Names
+         js/application-2c15e8c84b423e4dba8c.js   4.22 MiB       application  [emitted] [immutable]  application
+     js/application-2c15e8c84b423e4dba8c.js.map    4.1 MiB       application  [emitted] [dev]        application
+    js/server_rendering-8b3721821df8a9f41903.js    4.1 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8b3721821df8a9f41903.js.map   3.97 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  738 bytes                    [emitted]              
+Entrypoint application = js/application-2c15e8c84b423e4dba8c.js js/application-2c15e8c84b423e4dba8c.js.map
+Entrypoint server_rendering = js/server_rendering-8b3721821df8a9f41903.js js/server_rendering-8b3721821df8a9f41903.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[1] readable-stream (ignored) 15 bytes {application} {server_rendering} [built]
+[2] util (ignored) 15 bytes {application} {server_rendering} [built]
+[3] util (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {server_rendering} [built]
+    + 743 hidden modules
+
+Completed 200 OK in 48126ms (Views: 48121.4ms | ActiveRecord: 0.0ms | Allocations: 50958)
+
+
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/assemble/assemble_app/public/packs
+[Webpacker] Hash: 1db547e248e0a73df42e
+Version: webpack 4.44.1
+Time: 41792ms
+Built at: 09/14/2020 12:39:06 PM
+                                          Asset       Size            Chunks                         Chunk Names
+         js/application-2c15e8c84b423e4dba8c.js   4.22 MiB       application  [emitted] [immutable]  application
+     js/application-2c15e8c84b423e4dba8c.js.map    4.1 MiB       application  [emitted] [dev]        application
+    js/server_rendering-8b3721821df8a9f41903.js    4.1 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-8b3721821df8a9f41903.js.map   3.97 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  738 bytes                    [emitted]              
+Entrypoint application = js/application-2c15e8c84b423e4dba8c.js js/application-2c15e8c84b423e4dba8c.js.map
+Entrypoint server_rendering = js/server_rendering-8b3721821df8a9f41903.js js/server_rendering-8b3721821df8a9f41903.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[1] readable-stream (ignored) 15 bytes {application} {server_rendering} [built]
+[2] util (ignored) 15 bytes {application} {server_rendering} [built]
+[3] util (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {server_rendering} [built]
+    + 743 hidden modules
+
+Completed 200 OK in 51470ms (Views: 51452.2ms | ActiveRecord: 0.0ms | Allocations: 165848)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:39:06 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:39:06 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:39:06 -0700
+Processing by MemberController#index as */*
+Processing by ProjectTechnologyController#index as */*
+  [1m[36mProjectTechnology Load (6.9ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  [1m[36mMember Load (10.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 59ms (Views: 24.3ms | ActiveRecord: 16.8ms | Allocations: 8223)
+
+
+Completed 200 OK in 80ms (Views: 23.4ms | ActiveRecord: 36.9ms | Allocations: 12280)
+
+
+Processing by ProjectsController#index as */*
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 61ms (Views: 24.0ms | ActiveRecord: 19.8ms | Allocations: 6743)
+
+
+Started GET "/" for ::1 at 2020-09-14 12:39:15 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.0ms | Allocations: 8133)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:39:15 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:39:15 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:39:15 -0700
+Processing by MemberController#index as */*
+Processing by ProjectsController#index as */*
+Processing by ProjectTechnologyController#index as */*
+  [1m[36mMember Load (3.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 3.4ms | Allocations: 3352)
+
+
+  [1m[36mProjectTechnology Load (6.5ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 6.5ms | Allocations: 3975)
+
+
+  [1m[36mProject Load (15.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 4.7ms | ActiveRecord: 15.7ms | Allocations: 6206)
+
+
+Started GET "/aboutus" for ::1 at 2020-09-14 12:40:07 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"aboutus"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 264)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/learnacademy/Desktop/assemble/assemble_app/public/packs
+[Webpacker] Hash: a096cde5116517706a5e
+Version: webpack 4.44.1
+Time: 9236ms
+Built at: 09/14/2020 12:40:18 PM
+                                          Asset       Size            Chunks                         Chunk Names
+         js/application-81882becc26ca1efe41a.js   4.22 MiB       application  [emitted] [immutable]  application
+     js/application-81882becc26ca1efe41a.js.map    4.1 MiB       application  [emitted] [dev]        application
+    js/server_rendering-bbbea6a7526896a2130b.js    4.1 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-bbbea6a7526896a2130b.js.map   3.97 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  738 bytes                    [emitted]              
+Entrypoint application = js/application-81882becc26ca1efe41a.js js/application-81882becc26ca1efe41a.js.map
+Entrypoint server_rendering = js/server_rendering-bbbea6a7526896a2130b.js js/server_rendering-bbbea6a7526896a2130b.js.map
+[0] ./util.inspect (ignored) 15 bytes {application} {server_rendering} [built]
+[1] readable-stream (ignored) 15 bytes {application} {server_rendering} [built]
+[2] util (ignored) 15 bytes {application} {server_rendering} [built]
+[3] util (ignored) 15 bytes {application} {server_rendering} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1 KiB {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {server_rendering} [built]
+    + 743 hidden modules
+
+Completed 200 OK in 11443ms (Views: 11440.5ms | ActiveRecord: 0.0ms | Allocations: 10498)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:40:18 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:40:18 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:40:18 -0700
+Processing by ProjectsController#index as */*
+Processing by ProjectTechnologyController#index as */*
+Processing by MemberController#index as */*
+  [1m[36mProject Load (20.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+  [1m[36mProjectTechnology Load (7.3ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+  [1m[36mMember Load (18.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 14.3ms | ActiveRecord: 39.2ms | Allocations: 12224)
+
+
+Completed 200 OK in 137ms (Views: 14.0ms | ActiveRecord: 118.7ms | Allocations: 12057)
+
+
+Completed 200 OK in 167ms (Views: 18.1ms | ActiveRecord: 144.9ms | Allocations: 15118)
+
+
+Started GET "/" for ::1 at 2020-09-14 12:46:26 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 9044)
+
+
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:46:26 -0700
+Started GET "/projects" for ::1 at 2020-09-14 12:46:27 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:46:27 -0700
+Processing by ProjectTechnologyController#index as */*
+  [1m[36mProjectTechnology Load (83.5ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 112ms (Views: 23.2ms | ActiveRecord: 83.5ms | Allocations: 5171)
+
+
+Processing by ProjectsController#index as */*
+Processing by MemberController#index as */*
+  [1m[36mMember Load (125.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 157ms (Views: 25.8ms | ActiveRecord: 125.4ms | Allocations: 5600)
+
+
+  [1m[36mProject Load (159.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 223ms (Views: 34.1ms | ActiveRecord: 159.6ms | Allocations: 12318)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-14 12:46:37 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 590)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 213.7ms | Allocations: 7612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 315ms (Views: 253.7ms | ActiveRecord: 26.9ms | Allocations: 22699)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-09-14 12:46:56 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"UFBNULNeB0NhZF7NLsklYNx5LNDigdRpdD8+Veu+m+JzoT3KMy+NKm6T9UitMIFSAaZJV6Y/TgBJYOw708uTFA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 678ms (ActiveRecord: 23.9ms | Allocations: 6863)
+
+
+Started GET "/" for ::1 at 2020-09-14 12:46:57 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 1194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 90.4ms | ActiveRecord: 0.5ms | Allocations: 9192)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:46:58 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:46:58 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:46:58 -0700
+Processing by ProjectsController#index as */*
+Processing by MemberController#index as */*
+Processing by ProjectTechnologyController#index as */*
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 3.9ms | Allocations: 2723)
+
+
+  [1m[36mMember Load (2.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 2.5ms | Allocations: 4269)
+
+
+  [1m[36mProjectTechnology Load (39.5ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 6.5ms | ActiveRecord: 39.5ms | Allocations: 5951)
+
+
+Started GET "/packs/js/application-90947ffb3650e2ed8b58.js" for ::1 at 2020-09-14 12:47:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-90947ffb3650e2ed8b58.js"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-14 12:47:04 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:2
+  Rendered home/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 1298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 45.0ms | ActiveRecord: 26.2ms | Allocations: 9323)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:47:04 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:47:04 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:47:04 -0700
+Processing by ProjectsController#index as */*
+Processing by ProjectTechnologyController#index as */*
+Processing by MemberController#index as */*
+  [1m[36mProject Load (26.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 4.8ms | ActiveRecord: 26.1ms | Allocations: 3625)
+
+
+  [1m[36mProjectTechnology Load (27.4ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 6.5ms | ActiveRecord: 27.4ms | Allocations: 4418)
+
+
+  [1m[36mMember Load (38.0ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 6.7ms | ActiveRecord: 38.0ms | Allocations: 6000)
+
+
+Started GET "/users/sign_out" for ::1 at 2020-09-14 12:47:07 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 1.4ms | Allocations: 3036)
+
+
+Started GET "/" for ::1 at 2020-09-14 12:47:07 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 251)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 8241)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:47:07 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:47:07 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:47:07 -0700
+Processing by ProjectTechnologyController#index as */*
+Processing by MemberController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mMember Load (22.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+  [1m[36mProjectTechnology Load (29.2ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+Completed 200 OK in 29ms (Views: 5.3ms | ActiveRecord: 22.4ms | Allocations: 2467)
+
+
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+  [1m[36mProject Load (28.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 42ms (Views: 10.9ms | ActiveRecord: 29.2ms | Allocations: 6256)
+
+
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 15.6ms | ActiveRecord: 28.3ms | Allocations: 5906)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-14 12:47:10 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.0ms | Allocations: 9248)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:47:22 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:47:22 -0700
+Processing by ProjectsController#index as */*
+Started GET "/members" for ::1 at 2020-09-14 12:47:22 -0700
+  [1m[36mProject Load (47.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 5.3ms | ActiveRecord: 47.3ms | Allocations: 2483)
+
+
+Processing by ProjectTechnologyController#index as */*
+Processing by MemberController#index as */*
+  [1m[36mProjectTechnology Load (67.6ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  [1m[36mMember Load (65.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 77ms (Views: 8.0ms | ActiveRecord: 67.6ms | Allocations: 3239)
+
+
+Completed 200 OK in 79ms (Views: 12.1ms | ActiveRecord: 65.9ms | Allocations: 3706)
+
+
+Started PATCH "/projects/1" for ::1 at 2020-09-14 12:47:41 -0700
+Processing by ProjectsController#update as */*
+  Parameters: {"name"=>"Assemble", "description"=>"We ask that you know the difference between capital and lower case letters and when to use them.", "id"=>"1", "project"=>{"name"=>"Assemble", "description"=>"We ask that you know the difference between capital and lower case letters and when to use them."}}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:25:in `update'
+[31mUnpermitted parameters: :name, :description, :id[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 6.1ms | Allocations: 1850)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'project' for Project.):
+  
+app/controllers/projects_controller.rb:26:in `update'
+Started GET "/" for ::1 at 2020-09-14 12:47:45 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 8243)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:47:45 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:47:45 -0700
+Processing by ProjectTechnologyController#index as */*
+Started GET "/members" for ::1 at 2020-09-14 12:47:45 -0700
+Processing by ProjectsController#index as */*
+  [1m[36mProjectTechnology Load (22.2ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 8.5ms | ActiveRecord: 22.2ms | Allocations: 3181)
+
+
+  [1m[36mProject Load (25.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Processing by MemberController#index as */*
+Completed 200 OK in 44ms (Views: 13.9ms | ActiveRecord: 25.8ms | Allocations: 4542)
+
+
+  [1m[36mMember Load (20.7ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 6.1ms | ActiveRecord: 20.7ms | Allocations: 2370)
+
+
+Started GET "/" for ::1 at 2020-09-14 12:47:51 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 8148)
+
+
+Started GET "/projects" for ::1 at 2020-09-14 12:47:51 -0700
+Started GET "/members" for ::1 at 2020-09-14 12:47:51 -0700
+Started GET "/project_technologies" for ::1 at 2020-09-14 12:47:51 -0700
+Processing by ProjectsController#index as */*
+Processing by ProjectTechnologyController#index as */*
+Processing by MemberController#index as */*
+  [1m[36mProject Load (11.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProjectTechnology Load (2.1ms)[0m  [1m[34mSELECT "project_technologies".* FROM "project_technologies"[0m
+  [1m[36mMember Load (3.6ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  ↳ app/controllers/projects_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 10.0ms | ActiveRecord: 11.5ms | Allocations: 4950)
+
+
+  ↳ app/controllers/project_technology_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 18.9ms | ActiveRecord: 2.1ms | Allocations: 5273)
+
+
+  ↳ app/controllers/member_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 3.6ms | Allocations: 5723)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-14 12:55:27 -0700
+  
+LoadError (cannot load such file -- /Users/learnacademy/Desktop/assemble/assemble_app/config/routes.rb):
+  
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+bootsnap (1.4.8) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:40:in `each'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:20:in `reload!'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:29:in `block in updater'
+activesupport (6.0.3.2) lib/active_support/file_update_checker.rb:83:in `execute'
+railties (6.0.3.2) lib/rails/application/routes_reloader.rb:10:in `execute'
+railties (6.0.3.2) lib/rails/application/finisher.rb:197:in `block (2 levels) in <module:Finisher>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `instance_exec'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:605:in `block (2 levels) in default_terminator'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:604:in `catch'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:604:in `block in default_terminator'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+activesupport (6.0.3.2) lib/active_support/execution_wrapper.rb:111:in `run!'
+activesupport (6.0.3.2) lib/active_support/reloader.rb:114:in `run!'
+activesupport (6.0.3.2) lib/active_support/execution_wrapper.rb:73:in `block in run!'
+activesupport (6.0.3.2) lib/active_support/execution_wrapper.rb:70:in `tap'
+activesupport (6.0.3.2) lib/active_support/execution_wrapper.rb:70:in `run!'
+activesupport (6.0.3.2) lib/active_support/reloader.rb:63:in `run!'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'

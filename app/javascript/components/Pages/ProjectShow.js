@@ -22,7 +22,8 @@ class ProjectShow extends Component {
     }
 
     render() {
-        console.log(this.props.isCurrentUserTheOwner(this.props.project))
+        console.log(this.props.isCurrentUserTheOwner(this.props.project));
+        console.log(this.props.projectIDCompare(this.props.project));
         // console.log(this.props.getProjectTechnologies());
         // deconstructs projects so I don't have to type out the entire dot syntax for it every time.
         let { project } = this.props
@@ -31,6 +32,8 @@ class ProjectShow extends Component {
                 <br/><br/>
                 {/* <p id="filter-body-text" style={{textAlign:"left", fontWeight: "700", color:"#0f9fed"}}>Project Name:</p> */}
                 <h1 id="h1-dark-blue">{ project.name }</h1>
+                {console.log("project:", project)}
+                {/* {console.log("tech:", technology)} */}
                 <br/>
                 <p id="filter-body-text" style={{textAlign:"center", fontWeight: "700", color:"#0f9fed"}}>Project Description:</p>
                 <p id="filter-body-text" style={{textAlign:"center", width:"40%", margin:"auto"}}>{ project.description }</p>

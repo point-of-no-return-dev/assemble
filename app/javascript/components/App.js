@@ -22,13 +22,25 @@ class App extends React.Component {
     super(props)
     this.state = {
       projects: [],
+      technologies: [],
       projectsToBeShown: [],
       currentFiltersSelected: [],
       projectTechnologies: [],
       membersBelongingToCurrentUser: []
     }
   }
-  
+
+  projectIDCompare = (project) => {
+    let id = project.id
+    let projectTechArr = this.state.projectTechnologies
+    console.log("this is the project id:", id);
+    console.log("this is the project technologies", projectTechArr);
+    return projectTechArr.forEach(arr => {
+      if (arr.project_id  === id){
+        return arr.technology_id
+      }
+    })
+  }
 
   isCurrentUserTheOwner = (project) => {
     console.log(this.state.membersBelongingToCurrentUser)
@@ -128,6 +140,7 @@ class App extends React.Component {
         console.log("index errors:", errors)
       })
     this.getProjectTechnologies()
+    // this.getTechnologies()
     this.updateMembersBelongingToCurrentUser()
   }
 
@@ -246,6 +259,25 @@ class App extends React.Component {
       console.log("Project Technologies errors:", errors);
     })
   }
+
+
+
+  // Gets an array of all technologies
+  getTechnologies = () => {
+    fetch("/technologies")
+    .then(response =>{
+      if(response.status === 200){
+        return response.json()
+      }
+    })
+    .then(techArr =>{
+      this.setState({technologies: techArr})
+    })
+    .catch(errors => {
+      console.log("Technologies errors:", errors);
+    })
+  }
+
   render () {
     const {
       logged_in,
@@ -255,6 +287,7 @@ class App extends React.Component {
     } = this.props
     console.log("logged_in", logged_in);
     console.log(this.state.projects);
+    console.log("tech:", this.state.technologies);
     return (
       <Router>
         <Header
@@ -297,12 +330,15 @@ class App extends React.Component {
             render={ (props) => {
               let id = props.match.params.id
               let project = this.state.projects.find(project => project.id === parseInt(id))
+              let technology = this.state.technologies.find(technology => technologies.id === parseInt(id))
               return (
                 <ProjectShow 
                   project = {project}
+                  technology = {technology}
                   current_user={current_user}
                   isCurrentUserTheOwner = {this.isCurrentUserTheOwner}
                   deleteProject = {this.deleteProject}
+                  projectIDCompare = {this.projectIDCompare}
                 />
               )
             }}
